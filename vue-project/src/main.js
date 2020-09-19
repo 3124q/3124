@@ -6,6 +6,8 @@ import router from './router'
 // 引入elementUI
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// 引入图标库相关
+import './icons/iconfont.css'
 // 引入axios，进行跨域交互
 import axios from 'axios'
 // 将axios对象设置为全局

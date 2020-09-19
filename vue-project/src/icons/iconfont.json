@@ -1,0 +1,37 @@
+{
+  "id": "2049270",
+  "name": "vue-fileShare",
+  "font_family": "iconfont",
+  "css_prefix_text": "el-ico-x",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7239461",
+      "name": "eye",
+      "font_class": "eye",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    },
+    {
+      "icon_id": "9080733",
+      "name": "eye",
+      "font_class": "eye1",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "11993596",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e7c3",
+      "unicode_decimal": 59331
+    },
+    {
+      "icon_id": "12779504",
+      "name": "password",
+      "font_class": "password",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    }
+  ]
+}
