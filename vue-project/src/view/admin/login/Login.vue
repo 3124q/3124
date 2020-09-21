@@ -108,7 +108,7 @@ export default {
         if (this.loginForm.username === 'admin') {
           if (this.loginForm.password === '123456') {
             this.alertErr('欢迎您,管理员Admin', 'success')
-            this.$router.push('/Admin')
+            this.$router.push('/Admin/home')
           } else {
             this.alertErr('密码错误', 'error')
           }

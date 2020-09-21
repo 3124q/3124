@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "user_administration"
+        name: "business_examine"
     }
 </script>
 

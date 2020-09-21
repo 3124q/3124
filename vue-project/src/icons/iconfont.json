@@ -6,6 +6,90 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "11865256",
+      "name": "购物",
+      "font_class": "gouwu",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "13931053",
+      "name": "个人中心",
+      "font_class": "ren",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "89029",
+      "name": "活动",
+      "font_class": "huodong",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "652505",
+      "name": "酒店",
+      "font_class": "jiudian-copy",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "4927333",
+      "name": "个人 (2)",
+      "font_class": "personal",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "6330945",
+      "name": "管理",
+      "font_class": "guanli",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "8196313",
+      "name": "通知",
+      "font_class": "tongzhi",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "8224437",
+      "name": "活动管理",
+      "font_class": "huodong1",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "8971233",
+      "name": "景点",
+      "font_class": "jingdian",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "11115236",
+      "name": "客 服",
+      "font_class": "kefu",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "11591885",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e9f9",
+      "unicode_decimal": 59897
+    },
+    {
+      "icon_id": "13856897",
+      "name": "图表",
+      "font_class": "tubiao",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
       "icon_id": "7239461",
       "name": "eye",
       "font_class": "eye",
