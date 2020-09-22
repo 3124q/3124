@@ -10,6 +10,17 @@ import personal_center from "../view/admin/admin/administration/account_administ
 import safety_center from "../view/admin/admin/administration/account_administration/safety_center";
 import web_notice from "../view/admin/admin/administration/account_administration/web_notice";
 import user_administration from "../view/admin/admin/administration/web_administration/user/user_administration";
+import PersonalCenter from "../view/home/personal_center/PersonalCenter";
+import PersonalCenterRecharge from "../view/home/personal_center/PersonalCenterRecharge";
+import PersonalCenterMywallet from "../view/home/personal_center/PersonalCenterMywallet";
+import PersonalCenterChangephone from "../view/home/personal_center/PersonalCenterChangephone";
+import PersonalCenterMygroup from "../view/home/personal_center/PersonalCenterMygroup";
+import PersonalCenterMyticket from "../view/home/personal_center/PersonalCenterMyticket";
+import PersonalCenterMyhotel from "../view/home/personal_center/PersonalCenterMyhotel";
+import PersonalCenterMyCollect from "../view/home/personal_center/PersonalCenterMyCollect";
+import PersonalCenterPwdchange from "../view/home/personal_center/PersonalCenterPwdchange";
+import PersonalCenterSetEmail from "../view/home/personal_center/PersonalCenterSetEmail";
+import PersonalCenterMyImformation from "../view/home/personal_center/PersonalCenterMyImformation";
 
 Vue.use(Router)
 
@@ -41,6 +52,60 @@ export default new Router({
         { path: '/admin/safetyCenter',name: 'safety_center',component: safety_center },
         { path: '/admin/notice',name: 'notice',component: web_notice },
         { path: '/admin/userAdministration',name: 'user_administration',component: user_administration }
+      ]
+    },
+    {path:"/personalcenter",name:'PersonalCenter',component:PersonalCenter,
+      children:[{
+        path:'/myimformation',
+        name:'myimformation',
+        component :PersonalCenterMyImformation
+      },
+        {
+          path:'/setemail',
+          name:'setemail',
+          component :PersonalCenterSetEmail
+        },
+        {
+          path:'/pwdchange',
+          name:'pwdchange',
+          component :PersonalCenterPwdchange
+        },
+        {
+          path:'/changephone',
+          name:'changephone',
+          component :PersonalCenterChangephone
+        },
+        {
+          path:'/mywallet',
+          name:'mywallet',
+          component :PersonalCenterMywallet
+        },
+        {
+          path:'/recharge',
+          name:'recharge',
+          component :PersonalCenterRecharge
+        },
+
+        {
+          path:'/mycollect',
+          name:'mycollect',
+          component :PersonalCenterMyCollect
+        },
+        {
+          path:'/myhotel',
+          name:'myhotel',
+          component :PersonalCenterMyhotel
+        },
+        {
+          path:'/myticket',
+          name:'myticket',
+          component :PersonalCenterMyticket
+        },
+        {
+          path:'/mygroup',
+          name:'mygroup',
+          component :PersonalCenterMygroup
+        },
       ]
     }
   ]
