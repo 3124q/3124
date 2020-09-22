@@ -79,13 +79,24 @@
             </el-menu-item-group>
             <el-menu-item-group>
               <template slot="title">商家管理</template>
-              <el-menu-item index="2-3">商家审核</el-menu-item>
-              <el-menu-item index="2-4">商家列表</el-menu-item>
+              <router-link to="/admin/business_examine">
+                <el-menu-item index="2-3">商家审核</el-menu-item>
+              </router-link>
+              <router-link to="/admin/businessAdministration">
+                <el-menu-item index="2-4">商家列表</el-menu-item>
+              </router-link>
             </el-menu-item-group>
             <el-menu-item-group>
               <template slot="title">管理员管理</template>
-              <el-menu-item index="2-5">管理员列表</el-menu-item>
-              <el-menu-item index="2-6">管理员权限</el-menu-item>
+              <router-link to="/admin/newAdministrator">
+                <el-menu-item index="2-5">新增管理员</el-menu-item>
+              </router-link>
+              <router-link to="/admin/administrators">
+                <el-menu-item index="2-6">管理员列表</el-menu-item>
+              </router-link>
+              <router-link to="/admin/authority">
+                <el-menu-item index="2-7">管理员权限</el-menu-item>
+              </router-link>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3" class="one_bar">

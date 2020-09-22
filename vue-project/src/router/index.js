@@ -10,6 +10,14 @@ import personal_center from "../view/admin/admin/administration/account_administ
 import safety_center from "../view/admin/admin/administration/account_administration/safety_center";
 import web_notice from "../view/admin/admin/administration/account_administration/web_notice";
 import user_administration from "../view/admin/admin/administration/web_administration/user/user_administration";
+import authority_administration
+  from "../view/admin/admin/administration/web_administration/administrators/authority_administration";
+import administrators_administration
+  from "../view/admin/admin/administration/web_administration/administrators/administrators_administration";
+import new_administrator from "../view/admin/admin/administration/web_administration/administrators/new_administrator";
+import business_administration
+  from "../view/admin/admin/administration/web_administration/business/business_administration";
+import business_examine from "../view/admin/admin/administration/web_administration/business/business_examine";
 import PersonalCenter from "../view/home/personal_center/PersonalCenter";
 import PersonalCenterRecharge from "../view/home/personal_center/PersonalCenterRecharge";
 import PersonalCenterMywallet from "../view/home/personal_center/PersonalCenterMywallet";
@@ -51,7 +59,12 @@ export default new Router({
         { path: '/admin/personalCenter',name: 'personal_center',component: personal_center },
         { path: '/admin/safetyCenter',name: 'safety_center',component: safety_center },
         { path: '/admin/notice',name: 'notice',component: web_notice },
-        { path: '/admin/userAdministration',name: 'user_administration',component: user_administration }
+        { path: '/admin/userAdministration',name: 'user_administration',component: user_administration },
+        { path: '/admin/authority',name: 'authority_administration',component: authority_administration},
+        { path: '/admin/newAdministrator',name: 'new_administrator',component: new_administrator},
+        { path: '/admin/business_examine',name: 'business_examine',component: business_examine},
+        { path: '/admin/businessAdministration',name: 'business_administration',component: business_administration},
+        { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration}
       ]
     },
     {path:"/personalcenter",name:'PersonalCenter',component:PersonalCenter,

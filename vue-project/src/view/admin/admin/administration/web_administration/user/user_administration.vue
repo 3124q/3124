@@ -60,7 +60,9 @@
         </el-table-column>
         <el-table-column label="操作">
           <template slot="header" slot-scope="scope">
+            操作
             <el-input
+              style="float: right;width: 85%;"
               v-model="search"
               size="mini"
               placeholder="输入关键字搜索"/>
