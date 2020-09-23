@@ -152,26 +152,37 @@
               <i class="iconfont el-ico-xjingdian"></i>
               <span slot="title">景点管理</span>
             </template>
-            <el-menu-item index="7-1">景点发布</el-menu-item>
-            <el-menu-item index="7-2">景点管理</el-menu-item>
+            <router-link to="/admin/famously_publish">
+              <el-menu-item index="7-1">景点发布</el-menu-item>
+            </router-link>
+            <router-link to="/admin/famouslyAdministration">
+              <el-menu-item index="7-2">景点管理</el-menu-item>
+            </router-link>
             <el-menu-item index="7-3">景点活动</el-menu-item>
-            <el-menu-item index="7-4">景点评论</el-menu-item>
+            <router-link to="/admin/famouslyCommnet">
+              <el-menu-item index="7-4">景点评论</el-menu-item>
+            </router-link>
             <el-menu-item index="7-5">官方博客</el-menu-item>
             <el-menu-item index="7-6">景点客服</el-menu-item>
             <el-menu-item index="7-7">景点旅游团</el-menu-item>
-            <el-menu-item index="7-8">宣传广告</el-menu-item>
+            <router-link to="/admin/famouslyPropaganda">
+              <el-menu-item index="7-8">宣传广告</el-menu-item>
+            </router-link>
           </el-submenu>
           <el-submenu index="8" class="one_bar">
             <template slot="title">
               <i class="iconfont el-ico-xjiudian-copy"></i>
               <span slot="title">酒店管理</span>
             </template>
-            <el-menu-item index="8-1">酒店信息</el-menu-item>
+            <router-link to="/admin/hotel_pulish">
+              <el-menu-item index="8-1">酒店发布</el-menu-item>
+            </router-link>
             <el-menu-item index="8-2">酒店管理</el-menu-item>
-            <el-menu-item index="8-3">酒店活动</el-menu-item>
-            <el-menu-item index="8-4">酒店评价</el-menu-item>
-            <el-menu-item index="8-5">酒店客服</el-menu-item>
-            <el-menu-item index="8-6">宣传广告</el-menu-item>
+            <el-menu-item index="8-3">房间管理</el-menu-item>
+            <el-menu-item index="8-4">酒店活动</el-menu-item>
+            <el-menu-item index="8-5">酒店评价</el-menu-item>
+            <el-menu-item index="8-6">酒店客服</el-menu-item>
+            <el-menu-item index="8-7">宣传广告</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
@@ -239,6 +250,9 @@ export default {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
+  }
+  .el-main::-webkit-scrollbar {
+    display: none;
   }
   #logo{
     margin:0px;
