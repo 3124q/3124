@@ -5,6 +5,8 @@ import router from '../router'
 import Index from '../view/home/index/Index'
 import Login from "../view/admin/login/Login"
 import Admin from "../view/admin/admin/admin"
+import homeLogin from "../view/home/login/login"
+import homeEnroll from "../view/home/enroll/enroll"
 import home_page from "../view/admin/admin/administration/home_page";
 import personal_center from "../view/admin/admin/administration/account_administration/personal_center";
 import safety_center from "../view/admin/admin/administration/account_administration/safety_center";
@@ -35,6 +37,11 @@ import famously_administration
   from "../view/admin/admin/administration/business_administration/famously/famously_administration";
 import famously_comment from "../view/admin/admin/administration/business_administration/famously/famously_comment";
 import propaganda from "../view/admin/admin/administration/business_administration/famously/propaganda";
+import search from "../view/home/search/search";
+import hotel_details from "../view/home/hotel_details/hotel_details";
+import room_pulish from "../view/admin/admin/administration/business_administration/hotel/room_pulish";
+import room_administration from "../view/admin/admin/administration/business_administration/hotel/room_administration";
+import hotel_comment from "../view/admin/admin/administration/business_administration/hotel/hotel_comment";
 
 Vue.use(Router)
 
@@ -50,6 +57,16 @@ export default new Router({
       path: '/index',
       name: 'Index',
       component: Index
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: search
+    },
+    {
+      path: '/hotelDetails',
+      name: 'hotel_details',
+      component: hotel_details
     },
     {
       path: '/admin/login',
@@ -73,6 +90,10 @@ export default new Router({
         { path: '/admin/hotel_pulish',name: 'hotel_publish',component: hotel_pulish},
         { path: '/admin/famouslyCommnet',name: 'famously_comment',component: famously_comment},
         { path: '/admin/famouslyPropaganda',name: 'propaganda',component: propaganda},
+        { path: '/admin/hotel_pulish',name: 'hotel_publish',component: hotel_pulish},
+        { path: '/admin/roomPulish',name: 'room_publish',component: room_pulish},
+        { path: '/admin/roomAdministration',name: 'room_administration',component: room_administration},
+        { path: '/admin/hotelOomment',name: 'hotel_comment',component: hotel_comment},
         { path: '/admin/famouslyAdministration',name: 'famously_administration',component: famously_administration},
         { path: '/admin/businessAdministration',name: 'business_administration',component: business_administration},
         { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration}
@@ -131,7 +152,17 @@ export default new Router({
           component :PersonalCenterMygroup
         },
       ]
-    }
+    },
+    {
+      path: '/homeLogin',
+      name: 'homeLogin',
+      component: homeLogin
+    },
+    {
+      path: '/homeEnroll',
+      name: 'homeEnroll',
+      component: homeEnroll
+    },
   ]
 })
 

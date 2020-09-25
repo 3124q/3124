@@ -178,11 +178,18 @@
               <el-menu-item index="8-1">酒店发布</el-menu-item>
             </router-link>
             <el-menu-item index="8-2">酒店管理</el-menu-item>
-            <el-menu-item index="8-3">房间管理</el-menu-item>
-            <el-menu-item index="8-4">酒店活动</el-menu-item>
-            <el-menu-item index="8-5">酒店评价</el-menu-item>
-            <el-menu-item index="8-6">酒店客服</el-menu-item>
-            <el-menu-item index="8-7">宣传广告</el-menu-item>
+            <router-link to="/admin/roomPulish">
+              <el-menu-item index="8-3">房间发布</el-menu-item>
+            </router-link>
+            <router-link to="/admin/roomAdministration">
+              <el-menu-item index="8-4">房间管理</el-menu-item>
+            </router-link>
+            <el-menu-item index="8-5">酒店活动</el-menu-item>
+            <router-link to="/admin/hotelOomment">
+              <el-menu-item index="8-6">酒店评价</el-menu-item>
+            </router-link>
+            <el-menu-item index="8-7">酒店客服</el-menu-item>
+            <el-menu-item index="8-8">宣传广告</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>

@@ -331,7 +331,7 @@
     width: 0px;
     height: 0px;
     position: absolute;
-    top: 22px;;
+    top: 22px;
     left: -18px;
     padding:0;
     border-right: 9px solid #B3C0D1;
