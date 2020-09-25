@@ -37,7 +37,8 @@ import famously_administration
   from "../view/admin/admin/administration/business_administration/famously/famously_administration";
 import famously_comment from "../view/admin/admin/administration/business_administration/famously/famously_comment";
 import propaganda from "../view/admin/admin/administration/business_administration/famously/propaganda";
-
+import Scenic from "../view/home/famously_details/Scenic";
+import Selfdrive from "../view/home/famously_details/Selfdrive";
 Vue.use(Router)
 
 export default new Router({
@@ -51,7 +52,17 @@ export default new Router({
     {
       path: '/index',
       name: 'Index',
-      component: Index
+      component: Index,
+    },
+    {
+      path: '/Scenic',
+      name: 'Scenic',
+      component: Scenic,
+    },
+    {
+      path: '/Selfdrive',
+      name: 'Selfdrive',
+      component: Selfdrive,
     },
     {
       path: '/admin/login',

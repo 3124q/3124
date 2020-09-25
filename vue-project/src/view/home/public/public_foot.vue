@@ -1,6 +1,5 @@
 <template>
     <div id="public_foot">
-
         <el-row class="home_bottom">
           <el-col class="bottom_image" :span="8">
             <img src="https://picbed.qunarzz.com/230c19ff7827e754ceb90c1df30662c9.png">
@@ -79,7 +78,7 @@
                 <rect id="Rectangle_22" data-name="Rectangle 22" width="907.576" height="1.627" transform="translate(170 790.34)" fill="#2f2e41"/>
               </g>
             </svg>
-            <transition name="el-zoom-in-center">
+            <transition name="el-fade-in-linear">
               <div v-show="show2" class="QR_code">
                 <img src="http://47.105.158.199/20200924224406.png">
               </div>
@@ -126,7 +125,6 @@
           </el-col>
         </el-row>
       </div>
-    </div>
 </template>
 
 <script>
