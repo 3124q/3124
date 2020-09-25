@@ -190,23 +190,6 @@
   }
   /*修改滚动条样式*/
   .el-main::-webkit-scrollbar{
-    width:5px;
-    height:10px;
-    cursor: pointer;
-    /**/
-  }
-  .el-main::-webkit-scrollbar-track{
-    background: rgb(239, 239, 239);
-    border-radius:2px;
-  }
-  .el-main::-webkit-scrollbar-thumb{
-    background: #bfbfbf;
-    border-radius:10px;
-  }
-  .el-main::-webkit-scrollbar-thumb:hover{
-    background: #333;
-  }
-  .el-main::-webkit-scrollbar-corner{
-    background: #179a16;
+    width:0px;
   }
 </style>

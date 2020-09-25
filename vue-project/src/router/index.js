@@ -31,6 +31,12 @@ import PersonalCenterSetEmail from "../view/home/personal_center/PersonalCenterS
 import PersonalCenterMyImformation from "../view/home/personal_center/PersonalCenterMyImformation";
 import PersonalCenterMynews from "../view/home/personal_center/PersonalCenterMynews";
 import HelperCenter from "../view/home/personal_center/HelperCenter";
+import famously_pulish from "../view/admin/admin/administration/business_administration/famously/famously_pulish";
+import hotel_pulish from "../view/admin/admin/administration/business_administration/hotel/hotel_pulish";
+import famously_administration
+  from "../view/admin/admin/administration/business_administration/famously/famously_administration";
+import famously_comment from "../view/admin/admin/administration/business_administration/famously/famously_comment";
+import propaganda from "../view/admin/admin/administration/business_administration/famously/propaganda";
 
 Vue.use(Router)
 
@@ -65,6 +71,11 @@ export default new Router({
         { path: '/admin/authority',name: 'authority_administration',component: authority_administration},
         { path: '/admin/newAdministrator',name: 'new_administrator',component: new_administrator},
         { path: '/admin/business_examine',name: 'business_examine',component: business_examine},
+        { path: '/admin/famously_publish',name: 'famously_publish',component: famously_pulish},
+        { path: '/admin/hotel_pulish',name: 'hotel_publish',component: hotel_pulish},
+        { path: '/admin/famouslyCommnet',name: 'famously_comment',component: famously_comment},
+        { path: '/admin/famouslyPropaganda',name: 'propaganda',component: propaganda},
+        { path: '/admin/famouslyAdministration',name: 'famously_administration',component: famously_administration},
         { path: '/admin/businessAdministration',name: 'business_administration',component: business_administration},
         { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration}
       ]
