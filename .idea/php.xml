@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/tp6-project/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/league/flysystem-cached-adapter" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/composer" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/topthink/framework" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/topthink/think-orm" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/topthink/think-view" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/topthink/think-trace" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/topthink/think-helper" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/topthink/think-template" />
+      <path value="$PROJECT_DIR$/tp6-project/vendor/topthink/think-multi-app" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+</project>

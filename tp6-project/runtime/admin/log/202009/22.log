@@ -1,0 +1,59 @@
+[2020-09-22T14:03:23+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:01+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:05+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:31+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:32+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:32+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:32+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:33+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:33+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:33+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:33+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:33+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:34+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:34+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:43+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:34:46+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:41:29+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:41:35+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:41:53+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:43:01+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:43:20+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:46:20+08:00][error] [8]未定义数组索引: username
+[2020-09-22T14:50:36+08:00][error] [8]未定义数组索引: username
+[2020-09-22T21:03:06+08:00][error] [0]Call to undefined method app\admin\controller\admin::db()
+[2020-09-22T21:05:47+08:00][error] [0]Call to undefined method app\admin\controller\admin::db()
+[2020-09-22T21:06:30+08:00][error] [0]Call to undefined method app\admin\controller\admin::db()
+[2020-09-22T21:07:59+08:00][error] [0]Call to undefined method app\admin\controller\admin::db()
+[2020-09-22T21:09:01+08:00][error] [0]Call to undefined method app\admin\controller\admin::db()
+[2020-09-22T21:10:54+08:00][error] [0]Call to undefined method app\admin\controller\admin::db()
+[2020-09-22T21:11:58+08:00][error] [0]Call to undefined method app\admin\controller\admin::db()
+[2020-09-22T21:12:39+08:00][error] [2002]SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+[2020-09-22T21:12:44+08:00][error] [2002]SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+[2020-09-22T21:14:15+08:00][error] [2002]SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+[2020-09-22T21:20:51+08:00][error] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'120.36.248.174' (using password: YES)[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:568]
+[2020-09-22T21:26:36+08:00][sql] CONNECT:[ UseTime:0.118819s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-22T21:26:36+08:00][sql] SHOW FULL COLUMNS FROM `admin` [ RunTime:0.088650s ]
+[2020-09-22T21:26:39+08:00][sql] CONNECT:[ UseTime:0.112285s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-22T21:26:39+08:00][sql] SHOW FULL COLUMNS FROM `admin` [ RunTime:0.076360s ]
+[2020-09-22T21:27:03+08:00][sql] CONNECT:[ UseTime:0.101281s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-22T21:27:03+08:00][sql] SHOW FULL COLUMNS FROM `admin` [ RunTime:0.069609s ]
+[2020-09-22T21:27:03+08:00][sql] SELECT * FROM `admin` WHERE  `adminAcc` = 'admin'  AND `adminPwd` = '123456' [ RunTime:0.066197s ]
+[2020-09-22T21:27:09+08:00][sql] CONNECT:[ UseTime:0.112119s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-22T21:27:09+08:00][sql] SHOW FULL COLUMNS FROM `admin` [ RunTime:0.075355s ]
+[2020-09-22T21:27:09+08:00][sql] SELECT * FROM `admin` WHERE  `adminAcc` = 'admind'  AND `adminPwd` = '123456' [ RunTime:0.074155s ]
+[2020-09-22T21:57:34+08:00][sql] CONNECT:[ UseTime:0.100647s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-22T21:57:34+08:00][sql] SHOW FULL COLUMNS FROM `admin` [ RunTime:0.068290s ]
+[2020-09-22T21:57:34+08:00][sql] SELECT * FROM `admin` WHERE  `adminAcc` = 'admin'  AND `adminPwd` = '123456' [ RunTime:0.067086s ]
+[2020-09-22T21:58:08+08:00][sql] CONNECT:[ UseTime:0.131225s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-22T21:58:08+08:00][sql] SHOW FULL COLUMNS FROM `admin` [ RunTime:0.100139s ]
+[2020-09-22T21:58:08+08:00][sql] SELECT * FROM `admin` WHERE  `adminAcc` = 'admin'  AND `adminPwd` = '123456' [ RunTime:0.085616s ]
+[2020-09-22T21:58:43+08:00][sql] CONNECT:[ UseTime:0.094752s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-22T21:58:43+08:00][sql] SHOW FULL COLUMNS FROM `admin` [ RunTime:0.065648s ]
+[2020-09-22T21:58:43+08:00][sql] SELECT * FROM `admin` WHERE  `adminAcc` = 'admin'  AND `adminPwd` = '123456' [ RunTime:0.062381s ]
+[2020-09-22T21:58:58+08:00][sql] CONNECT:[ UseTime:0.110893s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-22T21:58:58+08:00][sql] SHOW FULL COLUMNS FROM `admin` [ RunTime:0.077944s ]
+[2020-09-22T21:58:58+08:00][sql] SELECT * FROM `admin` WHERE  `adminAcc` = 'admin'  AND `adminPwd` = '123456' [ RunTime:0.076144s ]

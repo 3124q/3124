@@ -29,6 +29,8 @@ import PersonalCenterMyCollect from "../view/home/personal_center/PersonalCenter
 import PersonalCenterPwdchange from "../view/home/personal_center/PersonalCenterPwdchange";
 import PersonalCenterSetEmail from "../view/home/personal_center/PersonalCenterSetEmail";
 import PersonalCenterMyImformation from "../view/home/personal_center/PersonalCenterMyImformation";
+import PersonalCenterMynews from "../view/home/personal_center/PersonalCenterMynews";
+import HelperCenter from "../view/home/personal_center/HelperCenter";
 
 Vue.use(Router)
 
@@ -67,6 +69,7 @@ export default new Router({
         { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration}
       ]
     },
+    {path:"/helpercenter/:id",name:'helpercenter',component:HelperCenter},
     {path:"/personalcenter",name:'PersonalCenter',component:PersonalCenter,
       children:[{
         path:'/myimformation',
@@ -118,6 +121,11 @@ export default new Router({
           path:'/mygroup',
           name:'mygroup',
           component :PersonalCenterMygroup
+        },
+        {
+          path:'/mynews',
+          name:'mynews',
+          component:PersonalCenterMynews
         },
       ]
     }

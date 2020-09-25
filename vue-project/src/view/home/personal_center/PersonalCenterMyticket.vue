@@ -39,6 +39,14 @@
           </template>
         </el-table-column>
         <el-table-column
+          label="参观日期"
+          width="100">
+          <template slot-scope="scope">
+            <i class="el-icon-time"></i>
+            <span style="margin-left: 10px">{{ scope.row.date }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column
           label="门票价格"
           width="80">
           <template slot-scope="scope">

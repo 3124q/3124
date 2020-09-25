@@ -20,12 +20,7 @@
             </el-menu-item-group>
           </el-submenu>
 
-        </el-menu>
-        <el-menu
-          default-active="2"
-          class="el-menu-vertical-demo"
-          :unique-opened="true"
-          router>
+
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-bicycle"></i>
@@ -36,14 +31,10 @@
               <el-menu-item index="2-1">我的行程</el-menu-item>
               <el-menu-item index="/mycollect">我的收藏</el-menu-item>
             </el-menu-item-group>
+
           </el-submenu>
 
-        </el-menu>
-        <el-menu
-          default-active="3"
-          class="el-menu-vertical-demo"
-          :unique-opened="true"
-          router>
+
           <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-bank-card"></i>
@@ -56,12 +47,7 @@
 
             </el-menu-item-group>
           </el-submenu>
-        </el-menu>
-        <el-menu
-          default-active="4"
-          class="el-menu-vertical-demo"
-          :unique-opened="true"
-          router>
+
           <el-submenu index="4">
             <template slot="title">
               <i class="el-icon-notebook-1"></i>
@@ -72,12 +58,7 @@
               <el-menu-item index="4-1">我的博客</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-        </el-menu>
-        <el-menu
-          default-active="5"
-          class="el-menu-vertical-demo"
-          :unique-opened="true"
-          router>
+
           <el-submenu index="5">
             <template slot="title">
               <i class="el-icon-shopping-cart-1"></i>
@@ -91,25 +72,25 @@
 
             </el-menu-item-group>
           </el-submenu>
-        </el-menu>
-        <el-menu
-          default-active="6"
-          class="el-menu-vertical-demo"
-          :unique-opened="true"
-          router>
+
+
           <el-submenu index="6">
             <template slot="title">
-              <i class="el-icon-shopping-cart-1"></i>
+              <i class="el-icon-notebook-2"></i>
               <span>我的帮助</span>
             </template>
             <el-menu-item-group>
               <template slot="title"></template>
-              <el-menu-item index="6-1">用户须知</el-menu-item>
-              <el-menu-item index="6-2">意见投诉</el-menu-item>
-              <el-menu-item index="6-3">联系客服</el-menu-item>
+              <el-menu-item index="/helpercenter/1">用户须知</el-menu-item>
+              <el-menu-item index="/helpercenter/2">意见投诉</el-menu-item>
+              <el-menu-item index="/helpercenter/3">联系客服</el-menu-item>
 
             </el-menu-item-group>
           </el-submenu>
+          <el-menu-item index="/mynews">
+            <i class="el-icon-chat-line-round"></i>
+            <span slot="title" style="font-size: 14px">我的消息</span>
+          </el-menu-item>
         </el-menu>
 
 
