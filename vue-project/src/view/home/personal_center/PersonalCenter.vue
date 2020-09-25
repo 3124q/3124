@@ -1,27 +1,48 @@
 <template>
+  <div>
   <el-container>
-    <el-header style="height: 40px;line-height: 40px">Header</el-header>
-    <el-header class="centerHead" style="height: 80px;line-height: 80px">Header</el-header>
+    <public_back_top/>
+    <el-header style="height: 40px;line-height: 40px">
+      <public_head_nav/></el-header>
+    <el-header class="centerHead" style="height: 80px;line-height: 80px">
+      <public_search/></el-header>
     <el-container class="content">
-      <el-aside width="300px"><PersonalCenterAside></PersonalCenterAside></el-aside>
-      <el-main><router-view></router-view></el-main>
+      <el-aside width="300px">
+        <PersonalCenterAside/></el-aside>
+      <el-main>
+        <router-view/></el-main>
+
     </el-container>
   </el-container>
+<public_foot></public_foot>
+  </div>
 </template>
+
 
 <script>
   import PersonalCenterAside from "./PersonalCenterAside";
+  import public_head_nav from "../public/public_head_nav";
+  import public_search from "../public/public_search";
+  import public_back_top from "../public/public_back_top";
+  import public_foot from "../public/public_foot";
     export default {
         name: "PersonalCenter",
       components:{
-          PersonalCenterAside
+          public_head_nav,
+          PersonalCenterAside,
+        public_search,
+        public_back_top,
+        public_foot
+
       }
     }
 </script>
 
 <style scoped>
+
   .el-header, .el-footer {
-    background-color: #B3C0D1;
+    padding: 0;
+    /*background-color: #B3C0D1;*/
     color: #333;
     text-align: center;
     line-height: 60px;
@@ -53,7 +74,10 @@
     padding: 0 50px;
   }
   .el-container{
-    /*padding: 0 30px;*/
+    width: 1200px;
+    height: 650px;
+    margin: 0 auto;
+    min-width: 1200px;
 
   }
 

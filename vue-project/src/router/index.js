@@ -31,6 +31,8 @@ import PersonalCenterMyCollect from "../view/home/personal_center/PersonalCenter
 import PersonalCenterPwdchange from "../view/home/personal_center/PersonalCenterPwdchange";
 import PersonalCenterSetEmail from "../view/home/personal_center/PersonalCenterSetEmail";
 import PersonalCenterMyImformation from "../view/home/personal_center/PersonalCenterMyImformation";
+import PersonalCenterMynews from "../view/home/personal_center/PersonalCenterMynews";
+import HelperCenter from "../view/home/personal_center/HelperCenter";
 import famously_pulish from "../view/admin/admin/administration/business_administration/famously/famously_pulish";
 import hotel_pulish from "../view/admin/admin/administration/business_administration/hotel/hotel_pulish";
 import famously_administration
@@ -43,6 +45,8 @@ import room_pulish from "../view/admin/admin/administration/business_administrat
 import room_administration from "../view/admin/admin/administration/business_administration/hotel/room_administration";
 import hotel_comment from "../view/admin/admin/administration/business_administration/hotel/hotel_comment";
 
+import Scenic from "../view/home/famously_details/Scenic";
+import Selfdrive from "../view/home/famously_details/Selfdrive";
 Vue.use(Router)
 
 export default new Router({
@@ -56,7 +60,17 @@ export default new Router({
     {
       path: '/index',
       name: 'Index',
-      component: Index
+      component: Index,
+    },
+    {
+      path: '/Scenic',
+      name: 'Scenic',
+      component: Scenic,
+    },
+    {
+      path: '/Selfdrive',
+      name: 'Selfdrive',
+      component: Selfdrive,
     },
     {
       path: '/search',
@@ -99,6 +113,7 @@ export default new Router({
         { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration}
       ]
     },
+    {path:"/helpercenter/:id",name:'helpercenter',component:HelperCenter},
     {path:"/personalcenter",name:'PersonalCenter',component:PersonalCenter,
       children:[{
         path:'/myimformation',
@@ -150,6 +165,11 @@ export default new Router({
           path:'/mygroup',
           name:'mygroup',
           component :PersonalCenterMygroup
+        },
+        {
+          path:'/mynews',
+          name:'mynews',
+          component:PersonalCenterMynews
         },
       ]
     },

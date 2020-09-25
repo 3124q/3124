@@ -1,0 +1,491 @@
+[2020-09-24T13:33:18+08:00][error] [2002]SQLSTATE[HY000] [2002] 套接字操作尝试一个无法连接的主机。
+[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:568]
+[2020-09-24T13:38:25+08:00][sql] CONNECT:[ UseTime:0.127995s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:38:25+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:38:47+08:00][sql] CONNECT:[ UseTime:0.103265s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:38:47+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:38:54+08:00][sql] CONNECT:[ UseTime:0.121723s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:38:54+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:38:57+08:00][sql] CONNECT:[ UseTime:0.114426s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:38:57+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:39:20+08:00][sql] CONNECT:[ UseTime:0.159938s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:39:20+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:39:51+08:00][sql] CONNECT:[ UseTime:0.106497s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:39:51+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:40:03+08:00][sql] CONNECT:[ UseTime:0.102656s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:40:03+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:49:55+08:00][sql] CONNECT:[ UseTime:0.122614s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:49:55+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:50:19+08:00][sql] CONNECT:[ UseTime:0.115682s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:50:19+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T13:51:06+08:00][sql] CONNECT:[ UseTime:0.138759s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T13:51:06+08:00][error] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Travel.user' doesn't exist[D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\PDOConnection.php:771]
+[2020-09-24T14:19:51+08:00][sql] CONNECT:[ UseTime:0.116817s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:19:51+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.080707s ]
+[2020-09-24T14:19:51+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.086567s ]
+[2020-09-24T14:31:37+08:00][sql] CONNECT:[ UseTime:0.117845s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:31:37+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079635s ]
+[2020-09-24T14:31:37+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.080141s ]
+[2020-09-24T14:31:37+08:00][sql] CONNECT:[ UseTime:0.120551s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:31:37+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082808s ]
+[2020-09-24T14:31:37+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.082225s ]
+[2020-09-24T14:32:04+08:00][sql] CONNECT:[ UseTime:0.103285s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:32:04+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.070706s ]
+[2020-09-24T14:32:04+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.070216s ]
+[2020-09-24T14:32:05+08:00][sql] CONNECT:[ UseTime:0.124796s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:32:05+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082924s ]
+[2020-09-24T14:32:05+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.078511s ]
+[2020-09-24T14:33:05+08:00][sql] CONNECT:[ UseTime:0.112200s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:33:05+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076518s ]
+[2020-09-24T14:33:05+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.077579s ]
+[2020-09-24T14:33:06+08:00][sql] CONNECT:[ UseTime:0.113732s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:33:06+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077392s ]
+[2020-09-24T14:33:06+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.076167s ]
+[2020-09-24T14:33:26+08:00][sql] CONNECT:[ UseTime:0.122674s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:33:26+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.083507s ]
+[2020-09-24T14:33:26+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.085911s ]
+[2020-09-24T14:33:27+08:00][sql] CONNECT:[ UseTime:0.104252s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:33:27+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.069136s ]
+[2020-09-24T14:33:27+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.068938s ]
+[2020-09-24T14:35:41+08:00][sql] CONNECT:[ UseTime:0.113119s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:35:41+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077888s ]
+[2020-09-24T14:35:41+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.078237s ]
+[2020-09-24T14:35:42+08:00][sql] CONNECT:[ UseTime:0.146915s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:35:42+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.085307s ]
+[2020-09-24T14:35:42+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.086078s ]
+[2020-09-24T14:38:15+08:00][sql] CONNECT:[ UseTime:0.118990s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:38:15+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077094s ]
+[2020-09-24T14:38:15+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.084379s ]
+[2020-09-24T14:38:16+08:00][sql] CONNECT:[ UseTime:0.123875s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:38:16+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082471s ]
+[2020-09-24T14:38:16+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.080628s ]
+[2020-09-24T14:39:55+08:00][sql] CONNECT:[ UseTime:0.110416s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:39:55+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.078161s ]
+[2020-09-24T14:39:55+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.076343s ]
+[2020-09-24T14:39:56+08:00][sql] CONNECT:[ UseTime:0.117229s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:39:56+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082274s ]
+[2020-09-24T14:39:56+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.082519s ]
+[2020-09-24T14:40:23+08:00][sql] CONNECT:[ UseTime:0.112009s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:40:23+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076398s ]
+[2020-09-24T14:40:23+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.078656s ]
+[2020-09-24T14:40:24+08:00][sql] CONNECT:[ UseTime:0.100246s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:40:24+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.069298s ]
+[2020-09-24T14:40:24+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.074790s ]
+[2020-09-24T14:40:29+08:00][sql] CONNECT:[ UseTime:0.123683s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:40:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082655s ]
+[2020-09-24T14:40:29+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.078659s ]
+[2020-09-24T14:40:30+08:00][sql] CONNECT:[ UseTime:0.110474s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:40:30+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075108s ]
+[2020-09-24T14:40:30+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073260s ]
+[2020-09-24T14:40:52+08:00][sql] CONNECT:[ UseTime:0.116140s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:40:52+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076683s ]
+[2020-09-24T14:40:52+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.081276s ]
+[2020-09-24T14:40:53+08:00][sql] CONNECT:[ UseTime:0.109832s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:40:53+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077806s ]
+[2020-09-24T14:40:53+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073950s ]
+[2020-09-24T14:41:17+08:00][sql] CONNECT:[ UseTime:0.115269s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:41:17+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077418s ]
+[2020-09-24T14:41:17+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075703s ]
+[2020-09-24T14:41:18+08:00][sql] CONNECT:[ UseTime:0.111689s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:41:18+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075609s ]
+[2020-09-24T14:41:18+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.076096s ]
+[2020-09-24T14:41:20+08:00][sql] CONNECT:[ UseTime:0.108579s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:41:20+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.072930s ]
+[2020-09-24T14:41:20+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073523s ]
+[2020-09-24T14:41:21+08:00][sql] CONNECT:[ UseTime:0.119500s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:41:21+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.094998s ]
+[2020-09-24T14:41:21+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.077279s ]
+[2020-09-24T14:41:33+08:00][sql] CONNECT:[ UseTime:0.100587s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:41:33+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.068391s ]
+[2020-09-24T14:41:33+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.067602s ]
+[2020-09-24T14:41:34+08:00][sql] CONNECT:[ UseTime:0.120316s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:41:34+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081643s ]
+[2020-09-24T14:41:34+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.086274s ]
+[2020-09-24T14:41:42+08:00][sql] CONNECT:[ UseTime:0.119686s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:41:42+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.084163s ]
+[2020-09-24T14:41:42+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079692s ]
+[2020-09-24T14:41:43+08:00][sql] CONNECT:[ UseTime:0.105351s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:41:43+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.070570s ]
+[2020-09-24T14:41:43+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.072189s ]
+[2020-09-24T14:43:51+08:00][sql] CONNECT:[ UseTime:0.208391s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:43:51+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076618s ]
+[2020-09-24T14:43:51+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075699s ]
+[2020-09-24T14:43:53+08:00][sql] CONNECT:[ UseTime:0.155432s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:43:53+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.067234s ]
+[2020-09-24T14:43:53+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.082116s ]
+[2020-09-24T14:44:14+08:00][sql] CONNECT:[ UseTime:0.107405s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:44:14+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074112s ]
+[2020-09-24T14:44:14+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.070635s ]
+[2020-09-24T14:44:14+08:00][sql] CONNECT:[ UseTime:0.126043s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:44:14+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.087408s ]
+[2020-09-24T14:44:14+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.080232s ]
+[2020-09-24T14:45:01+08:00][sql] CONNECT:[ UseTime:0.115657s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:45:01+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075344s ]
+[2020-09-24T14:45:01+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.074422s ]
+[2020-09-24T14:45:01+08:00][sql] CONNECT:[ UseTime:0.113354s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:45:01+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077264s ]
+[2020-09-24T14:45:01+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075858s ]
+[2020-09-24T14:46:03+08:00][sql] CONNECT:[ UseTime:0.127791s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:46:03+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.086792s ]
+[2020-09-24T14:46:03+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.084583s ]
+[2020-09-24T14:47:29+08:00][sql] CONNECT:[ UseTime:0.105801s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:47:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.070880s ]
+[2020-09-24T14:47:29+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.070302s ]
+[2020-09-24T14:47:29+08:00][sql] CONNECT:[ UseTime:0.110063s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:47:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077335s ]
+[2020-09-24T14:47:29+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.074848s ]
+[2020-09-24T14:47:48+08:00][sql] CONNECT:[ UseTime:0.119271s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:47:48+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.083784s ]
+[2020-09-24T14:47:48+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.086300s ]
+[2020-09-24T14:47:48+08:00][sql] CONNECT:[ UseTime:0.132261s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:47:48+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.091421s ]
+[2020-09-24T14:47:48+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.087202s ]
+[2020-09-24T14:58:19+08:00][sql] CONNECT:[ UseTime:0.107876s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:58:19+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075152s ]
+[2020-09-24T14:58:19+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.071783s ]
+[2020-09-24T14:58:19+08:00][sql] CONNECT:[ UseTime:0.122474s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:58:19+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081955s ]
+[2020-09-24T14:58:19+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.080854s ]
+[2020-09-24T14:59:45+08:00][sql] CONNECT:[ UseTime:0.112150s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:59:45+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.073737s ]
+[2020-09-24T14:59:45+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.072445s ]
+[2020-09-24T14:59:45+08:00][sql] CONNECT:[ UseTime:0.116899s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:59:45+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.078171s ]
+[2020-09-24T14:59:45+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.077196s ]
+[2020-09-24T14:59:56+08:00][sql] CONNECT:[ UseTime:0.102647s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:59:56+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.069991s ]
+[2020-09-24T14:59:56+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.067866s ]
+[2020-09-24T14:59:56+08:00][sql] CONNECT:[ UseTime:0.114626s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T14:59:56+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077711s ]
+[2020-09-24T14:59:56+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.076383s ]
+[2020-09-24T15:00:00+08:00][sql] CONNECT:[ UseTime:0.114456s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T15:00:00+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077237s ]
+[2020-09-24T15:00:00+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075781s ]
+[2020-09-24T15:01:29+08:00][sql] CONNECT:[ UseTime:0.116575s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T15:01:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079771s ]
+[2020-09-24T15:01:29+08:00][error] [10500]数据表字段不存在:[userBirthday][D:\phpstudypro\WWW\3124\tp6-project\vendor\topthink\think-orm\src\db\Builder.php:164]
+[2020-09-24T15:02:29+08:00][sql] CONNECT:[ UseTime:0.106762s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T15:02:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.070459s ]
+[2020-09-24T15:02:29+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '' , `userBirthday` = '' , `userSex` = '' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.069878s ]
+[2020-09-24T15:02:29+08:00][sql] SELECT * FROM `user` [ RunTime:0.069139s ]
+[2020-09-24T15:04:21+08:00][sql] CONNECT:[ UseTime:0.112573s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T15:04:21+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076071s ]
+[2020-09-24T15:04:21+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075215s ]
+[2020-09-24T15:04:24+08:00][sql] CONNECT:[ UseTime:0.112764s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T15:04:24+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077002s ]
+[2020-09-24T15:04:24+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.076203s ]
+[2020-09-24T15:05:25+08:00][sql] CONNECT:[ UseTime:0.120141s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T15:05:25+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082140s ]
+[2020-09-24T15:05:25+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.081795s ]
+[2020-09-24T15:08:04+08:00][sql] CONNECT:[ UseTime:0.116305s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T15:08:04+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081319s ]
+[2020-09-24T15:08:04+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.077035s ]
+[2020-09-24T16:07:38+08:00][sql] CONNECT:[ UseTime:0.100826s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:07:38+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.070023s ]
+[2020-09-24T16:07:38+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.068243s ]
+[2020-09-24T16:07:38+08:00][sql] CONNECT:[ UseTime:0.131596s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:07:38+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082359s ]
+[2020-09-24T16:07:38+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.082073s ]
+[2020-09-24T16:08:01+08:00][sql] CONNECT:[ UseTime:0.105819s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:08:01+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.073454s ]
+[2020-09-24T16:08:01+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.071576s ]
+[2020-09-24T16:08:25+08:00][sql] CONNECT:[ UseTime:0.124009s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:08:25+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.084089s ]
+[2020-09-24T16:08:25+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.084164s ]
+[2020-09-24T16:09:28+08:00][sql] CONNECT:[ UseTime:0.122596s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:09:28+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081591s ]
+[2020-09-24T16:09:28+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.081556s ]
+[2020-09-24T16:13:19+08:00][sql] CONNECT:[ UseTime:0.112677s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:13:19+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076921s ]
+[2020-09-24T16:13:19+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073795s ]
+[2020-09-24T16:13:19+08:00][sql] CONNECT:[ UseTime:0.106243s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:13:19+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075170s ]
+[2020-09-24T16:13:19+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.072848s ]
+[2020-09-24T16:18:02+08:00][sql] CONNECT:[ UseTime:0.114618s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:18:02+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075781s ]
+[2020-09-24T16:18:02+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075252s ]
+[2020-09-24T16:18:02+08:00][sql] CONNECT:[ UseTime:0.113854s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:18:02+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077332s ]
+[2020-09-24T16:18:02+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.077366s ]
+[2020-09-24T16:20:46+08:00][sql] CONNECT:[ UseTime:0.106883s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:20:46+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074061s ]
+[2020-09-24T16:20:46+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.072472s ]
+[2020-09-24T16:20:46+08:00][sql] CONNECT:[ UseTime:0.119210s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:20:46+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081663s ]
+[2020-09-24T16:20:46+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079924s ]
+[2020-09-24T16:23:01+08:00][sql] CONNECT:[ UseTime:0.104099s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:23:01+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.069706s ]
+[2020-09-24T16:23:01+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.069458s ]
+[2020-09-24T16:23:03+08:00][sql] CONNECT:[ UseTime:0.117470s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:23:03+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081451s ]
+[2020-09-24T16:23:03+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079167s ]
+[2020-09-24T16:25:03+08:00][sql] CONNECT:[ UseTime:0.108774s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:25:03+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.196840s ]
+[2020-09-24T16:25:03+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073996s ]
+[2020-09-24T16:25:03+08:00][sql] CONNECT:[ UseTime:0.124732s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:25:03+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.218823s ]
+[2020-09-24T16:25:03+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.082161s ]
+[2020-09-24T16:25:29+08:00][sql] CONNECT:[ UseTime:0.110064s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:25:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.073493s ]
+[2020-09-24T16:25:29+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073989s ]
+[2020-09-24T16:25:29+08:00][sql] CONNECT:[ UseTime:0.125912s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:25:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.084797s ]
+[2020-09-24T16:25:29+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.083053s ]
+[2020-09-24T16:26:04+08:00][sql] CONNECT:[ UseTime:0.105989s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:26:04+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.072242s ]
+[2020-09-24T16:26:04+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.071108s ]
+[2020-09-24T16:26:40+08:00][sql] CONNECT:[ UseTime:0.127737s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:26:40+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.086220s ]
+[2020-09-24T16:26:40+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.085077s ]
+[2020-09-24T16:26:40+08:00][sql] CONNECT:[ UseTime:0.110045s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:26:40+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075117s ]
+[2020-09-24T16:26:40+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073340s ]
+[2020-09-24T16:29:29+08:00][sql] CONNECT:[ UseTime:0.125519s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:29:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.084251s ]
+[2020-09-24T16:29:29+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '' , `userBirthday` = '2020-09-13T16:00:00.000Z' , `userSex` = '' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.082755s ]
+[2020-09-24T16:29:29+08:00][sql] SELECT * FROM `user` [ RunTime:0.083447s ]
+[2020-09-24T16:29:52+08:00][sql] CONNECT:[ UseTime:0.117858s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:29:52+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076340s ]
+[2020-09-24T16:29:52+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.076217s ]
+[2020-09-24T16:33:59+08:00][sql] CONNECT:[ UseTime:0.122126s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:33:59+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077735s ]
+[2020-09-24T16:33:59+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079331s ]
+[2020-09-24T16:35:20+08:00][sql] CONNECT:[ UseTime:0.124293s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:35:20+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.083589s ]
+[2020-09-24T16:35:20+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '' , `userBirthday` = '2014-09-16T16:00:00.000Z' , `userSex` = '1' , `userAddress` = '湖北省咸宁市通城县'  WHERE  `userID` = 1 [ RunTime:0.085132s ]
+[2020-09-24T16:35:20+08:00][sql] SELECT * FROM `user` [ RunTime:0.081984s ]
+[2020-09-24T16:35:29+08:00][sql] CONNECT:[ UseTime:0.097634s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:35:29+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.065798s ]
+[2020-09-24T16:35:29+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.065179s ]
+[2020-09-24T16:38:11+08:00][sql] CONNECT:[ UseTime:0.126552s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:38:11+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.087111s ]
+[2020-09-24T16:38:11+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '' , `userBirthday` = '2020-08-31T16:00:00.000Z' , `userSex` = '男' , `userAddress` = '湖南省怀化市靖州苗族侗族自治县'  WHERE  `userID` = 1 [ RunTime:0.084961s ]
+[2020-09-24T16:38:11+08:00][sql] SELECT * FROM `user` [ RunTime:0.085868s ]
+[2020-09-24T16:38:23+08:00][sql] CONNECT:[ UseTime:0.092354s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:38:23+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.063096s ]
+[2020-09-24T16:38:23+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '' , `userBirthday` = '2020-08-31T16:00:00.000Z' , `userSex` = '男' , `userAddress` = '湖南省怀化市靖州苗族侗族自治县'  WHERE  `userID` = 1 [ RunTime:0.060517s ]
+[2020-09-24T16:38:23+08:00][sql] SELECT * FROM `user` [ RunTime:0.060120s ]
+[2020-09-24T16:38:36+08:00][sql] CONNECT:[ UseTime:0.124873s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:38:36+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081753s ]
+[2020-09-24T16:38:36+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.081470s ]
+[2020-09-24T16:45:33+08:00][sql] CONNECT:[ UseTime:0.106793s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:45:33+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074781s ]
+[2020-09-24T16:45:33+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '' , `userBirthday` = '' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.071514s ]
+[2020-09-24T16:45:33+08:00][sql] SELECT * FROM `user` [ RunTime:0.071623s ]
+[2020-09-24T16:47:48+08:00][sql] CONNECT:[ UseTime:0.134231s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:47:48+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.091538s ]
+[2020-09-24T16:47:48+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '' , `userBirthday` = '' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.088293s ]
+[2020-09-24T16:47:48+08:00][sql] SELECT * FROM `user` [ RunTime:0.090011s ]
+[2020-09-24T16:47:57+08:00][sql] CONNECT:[ UseTime:0.106157s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:47:57+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.072926s ]
+[2020-09-24T16:47:57+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.071767s ]
+[2020-09-24T16:48:11+08:00][sql] CONNECT:[ UseTime:0.113323s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:48:11+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077094s ]
+[2020-09-24T16:48:11+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '' , `userBirthday` = '' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.075037s ]
+[2020-09-24T16:48:11+08:00][sql] SELECT * FROM `user` [ RunTime:0.085836s ]
+[2020-09-24T16:48:15+08:00][sql] CONNECT:[ UseTime:0.123879s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:48:15+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.084491s ]
+[2020-09-24T16:48:15+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.081086s ]
+[2020-09-24T16:49:05+08:00][sql] CONNECT:[ UseTime:0.110317s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:49:05+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074866s ]
+[2020-09-24T16:49:05+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.073176s ]
+[2020-09-24T16:49:05+08:00][sql] SELECT * FROM `user` [ RunTime:0.074538s ]
+[2020-09-24T16:49:15+08:00][sql] CONNECT:[ UseTime:0.109228s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:49:15+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074180s ]
+[2020-09-24T16:49:15+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073405s ]
+[2020-09-24T16:49:45+08:00][sql] CONNECT:[ UseTime:0.108731s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:49:45+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074574s ]
+[2020-09-24T16:49:45+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-08-31T16:00:00.000Z' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.072388s ]
+[2020-09-24T16:49:45+08:00][sql] SELECT * FROM `user` [ RunTime:0.073184s ]
+[2020-09-24T16:50:05+08:00][sql] CONNECT:[ UseTime:0.111315s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:50:05+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076759s ]
+[2020-09-24T16:50:05+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075770s ]
+[2020-09-24T16:50:53+08:00][sql] CONNECT:[ UseTime:0.112541s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:50:53+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.073499s ]
+[2020-09-24T16:50:53+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.072253s ]
+[2020-09-24T16:50:53+08:00][sql] CONNECT:[ UseTime:0.114385s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:50:53+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079420s ]
+[2020-09-24T16:50:53+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.078125s ]
+[2020-09-24T16:51:01+08:00][sql] CONNECT:[ UseTime:0.113972s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:51:01+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.073693s ]
+[2020-09-24T16:51:01+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.074628s ]
+[2020-09-24T16:51:01+08:00][sql] CONNECT:[ UseTime:0.108743s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:51:01+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.073796s ]
+[2020-09-24T16:51:01+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073881s ]
+[2020-09-24T16:59:39+08:00][sql] CONNECT:[ UseTime:0.107496s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:59:39+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.071634s ]
+[2020-09-24T16:59:39+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.070892s ]
+[2020-09-24T16:59:39+08:00][sql] CONNECT:[ UseTime:0.106611s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T16:59:39+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.070983s ]
+[2020-09-24T16:59:39+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.076654s ]
+[2020-09-24T17:00:00+08:00][sql] CONNECT:[ UseTime:0.123069s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:00:00+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.084404s ]
+[2020-09-24T17:00:00+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-06T16:00:00.000Z' , `userSex` = '男' , `userAddress` = '北京市北京市东城区'  WHERE  `userID` = 1 [ RunTime:0.081429s ]
+[2020-09-24T17:00:00+08:00][sql] SELECT * FROM `user` [ RunTime:0.082103s ]
+[2020-09-24T17:01:18+08:00][sql] CONNECT:[ UseTime:0.109249s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:01:18+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074900s ]
+[2020-09-24T17:01:18+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.074005s ]
+[2020-09-24T17:01:18+08:00][sql] CONNECT:[ UseTime:0.112597s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:01:18+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.078242s ]
+[2020-09-24T17:01:18+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075869s ]
+[2020-09-24T17:01:44+08:00][sql] CONNECT:[ UseTime:0.115939s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:01:44+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.078065s ]
+[2020-09-24T17:01:44+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-10-05T16:00:00.000Z' , `userSex` = '男' , `userAddress` = '江苏省盐城市射阳县'  WHERE  `userID` = 1 [ RunTime:0.075597s ]
+[2020-09-24T17:01:44+08:00][sql] SELECT * FROM `user` [ RunTime:0.077095s ]
+[2020-09-24T17:02:37+08:00][sql] CONNECT:[ UseTime:0.104650s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:02:37+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.071355s ]
+[2020-09-24T17:02:37+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.069890s ]
+[2020-09-24T17:02:40+08:00][sql] CONNECT:[ UseTime:0.098856s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:02:40+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.066356s ]
+[2020-09-24T17:02:40+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.065266s ]
+[2020-09-24T17:02:54+08:00][sql] CONNECT:[ UseTime:0.109657s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:02:54+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075354s ]
+[2020-09-24T17:02:54+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-13T16:00:00.000Z' , `userSex` = '男' , `userAddress` = '天津市天津市河东区'  WHERE  `userID` = 1 [ RunTime:0.072493s ]
+[2020-09-24T17:02:54+08:00][sql] SELECT * FROM `user` [ RunTime:0.075900s ]
+[2020-09-24T17:03:42+08:00][sql] CONNECT:[ UseTime:0.122617s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:03:42+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079525s ]
+[2020-09-24T17:03:42+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.074793s ]
+[2020-09-24T17:03:44+08:00][sql] CONNECT:[ UseTime:0.109603s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:03:44+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075119s ]
+[2020-09-24T17:03:44+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.074179s ]
+[2020-09-24T17:03:57+08:00][sql] CONNECT:[ UseTime:0.110480s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:03:57+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075037s ]
+[2020-09-24T17:03:57+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-22T16:00:00.000Z' , `userSex` = '男' , `userAddress` = '江西省赣州市寻乌县'  WHERE  `userID` = 1 [ RunTime:0.073521s ]
+[2020-09-24T17:03:57+08:00][sql] SELECT * FROM `user` [ RunTime:0.074885s ]
+[2020-09-24T17:10:46+08:00][sql] CONNECT:[ UseTime:0.107968s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:10:46+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074045s ]
+[2020-09-24T17:10:46+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073307s ]
+[2020-09-24T17:10:47+08:00][sql] CONNECT:[ UseTime:0.123931s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:10:47+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082131s ]
+[2020-09-24T17:10:47+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.083946s ]
+[2020-09-24T17:11:27+08:00][sql] CONNECT:[ UseTime:0.112390s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:11:27+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075357s ]
+[2020-09-24T17:11:27+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075571s ]
+[2020-09-24T17:11:27+08:00][sql] CONNECT:[ UseTime:0.109682s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:11:27+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074330s ]
+[2020-09-24T17:11:27+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.074469s ]
+[2020-09-24T17:11:33+08:00][sql] CONNECT:[ UseTime:0.120158s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:11:33+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079944s ]
+[2020-09-24T17:11:33+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079895s ]
+[2020-09-24T17:16:37+08:00][sql] CONNECT:[ UseTime:0.109716s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:16:37+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074178s ]
+[2020-09-24T17:16:37+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-02T16:00:00.000Z' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.071735s ]
+[2020-09-24T17:16:37+08:00][sql] SELECT * FROM `user` [ RunTime:0.073884s ]
+[2020-09-24T17:16:55+08:00][sql] CONNECT:[ UseTime:0.117420s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:16:55+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079230s ]
+[2020-09-24T17:16:55+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-08T16:00:00.000Z' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.077791s ]
+[2020-09-24T17:16:55+08:00][sql] SELECT * FROM `user` [ RunTime:0.079577s ]
+[2020-09-24T17:20:03+08:00][sql] CONNECT:[ UseTime:0.105066s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:20:03+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.072161s ]
+[2020-09-24T17:20:03+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.070652s ]
+[2020-09-24T17:20:09+08:00][sql] CONNECT:[ UseTime:0.113790s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:20:09+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079509s ]
+[2020-09-24T17:20:09+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-02T16:00:00.000Z' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.075523s ]
+[2020-09-24T17:20:09+08:00][sql] SELECT * FROM `user` [ RunTime:0.078268s ]
+[2020-09-24T17:33:34+08:00][sql] CONNECT:[ UseTime:0.114224s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:33:34+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.077473s ]
+[2020-09-24T17:33:34+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.076277s ]
+[2020-09-24T17:33:34+08:00][sql] CONNECT:[ UseTime:0.118296s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:33:34+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081277s ]
+[2020-09-24T17:33:34+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.080464s ]
+[2020-09-24T17:33:37+08:00][sql] CONNECT:[ UseTime:0.117450s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:33:37+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.078405s ]
+[2020-09-24T17:33:37+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.078377s ]
+[2020-09-24T17:33:49+08:00][sql] CONNECT:[ UseTime:0.122924s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:33:49+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.084442s ]
+[2020-09-24T17:33:49+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03 ' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.080745s ]
+[2020-09-24T17:33:49+08:00][sql] SELECT * FROM `user` [ RunTime:0.082232s ]
+[2020-09-24T17:33:59+08:00][sql] CONNECT:[ UseTime:0.100312s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:33:59+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.069584s ]
+[2020-09-24T17:33:59+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.065895s ]
+[2020-09-24T17:33:59+08:00][sql] SELECT * FROM `user` [ RunTime:0.067477s ]
+[2020-09-24T17:34:06+08:00][sql] CONNECT:[ UseTime:0.119882s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:34:06+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081219s ]
+[2020-09-24T17:34:06+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079403s ]
+[2020-09-24T17:34:09+08:00][sql] CONNECT:[ UseTime:0.107768s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:34:09+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.072587s ]
+[2020-09-24T17:34:09+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073953s ]
+[2020-09-24T17:34:15+08:00][sql] CONNECT:[ UseTime:0.112053s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:34:15+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074778s ]
+[2020-09-24T17:34:15+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-10 ' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.072635s ]
+[2020-09-24T17:34:15+08:00][sql] SELECT * FROM `user` [ RunTime:0.073602s ]
+[2020-09-24T17:37:32+08:00][sql] CONNECT:[ UseTime:0.118577s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:37:32+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.080941s ]
+[2020-09-24T17:37:32+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.082965s ]
+[2020-09-24T17:37:33+08:00][sql] CONNECT:[ UseTime:0.127714s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:37:33+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.087307s ]
+[2020-09-24T17:37:33+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.086619s ]
+[2020-09-24T17:38:06+08:00][sql] CONNECT:[ UseTime:0.113686s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:38:06+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075889s ]
+[2020-09-24T17:38:06+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03 ' , `userSex` = '男' , `userAddress` = ''  WHERE  `userID` = 1 [ RunTime:0.072456s ]
+[2020-09-24T17:38:06+08:00][sql] SELECT * FROM `user` [ RunTime:0.074236s ]
+[2020-09-24T17:39:15+08:00][sql] CONNECT:[ UseTime:0.124354s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:39:15+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.085856s ]
+[2020-09-24T17:39:15+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.083484s ]
+[2020-09-24T17:39:15+08:00][sql] CONNECT:[ UseTime:0.107214s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:39:15+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.074388s ]
+[2020-09-24T17:39:15+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.072520s ]
+[2020-09-24T17:39:22+08:00][sql] CONNECT:[ UseTime:0.126954s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:39:22+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.085472s ]
+[2020-09-24T17:39:22+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.085387s ]
+[2020-09-24T17:41:59+08:00][sql] CONNECT:[ UseTime:0.120325s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:41:59+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.080918s ]
+[2020-09-24T17:41:59+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.081405s ]
+[2020-09-24T17:42:00+08:00][sql] CONNECT:[ UseTime:0.121187s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:42:00+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.080999s ]
+[2020-09-24T17:42:00+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.083228s ]
+[2020-09-24T17:42:46+08:00][sql] CONNECT:[ UseTime:0.113120s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:42:46+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076557s ]
+[2020-09-24T17:42:46+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03' , `userSex` = '男' , `userAddress` = '天津市天津市河东区'  WHERE  `userID` = 1 [ RunTime:0.073926s ]
+[2020-09-24T17:42:46+08:00][sql] SELECT * FROM `user` [ RunTime:0.074054s ]
+[2020-09-24T17:43:07+08:00][sql] CONNECT:[ UseTime:0.133979s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:43:07+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.089830s ]
+[2020-09-24T17:43:07+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03' , `userSex` = '男' , `userAddress` = '内蒙古自治区乌海市海南区'  WHERE  `userID` = 1 [ RunTime:0.087375s ]
+[2020-09-24T17:43:07+08:00][sql] SELECT * FROM `user` [ RunTime:0.089972s ]
+[2020-09-24T17:51:14+08:00][sql] CONNECT:[ UseTime:0.113351s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:51:14+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.075400s ]
+[2020-09-24T17:51:14+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03' , `userSex` = '男' , `userAddress` = '内蒙古自治区乌海市海南区'  WHERE  `userID` = 1 [ RunTime:0.075522s ]
+[2020-09-24T17:51:14+08:00][sql] SELECT * FROM `user` [ RunTime:0.074106s ]
+[2020-09-24T17:51:14+08:00][sql] CONNECT:[ UseTime:0.121535s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:51:14+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.082673s ]
+[2020-09-24T17:51:14+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03' , `userSex` = '男' , `userAddress` = '内蒙古自治区乌海市海南区'  WHERE  `userID` = 1 [ RunTime:0.079272s ]
+[2020-09-24T17:51:14+08:00][sql] SELECT * FROM `user` [ RunTime:0.083028s ]
+[2020-09-24T17:51:21+08:00][sql] CONNECT:[ UseTime:0.118793s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:51:21+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.080812s ]
+[2020-09-24T17:51:21+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03' , `userSex` = '男' , `userAddress` = '内蒙古自治区乌海市海南区'  WHERE  `userID` = 1 [ RunTime:0.080113s ]
+[2020-09-24T17:51:21+08:00][sql] SELECT * FROM `user` [ RunTime:0.080089s ]
+[2020-09-24T17:52:00+08:00][sql] CONNECT:[ UseTime:0.116680s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:52:00+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.078628s ]
+[2020-09-24T17:52:00+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.078788s ]
+[2020-09-24T17:52:10+08:00][sql] CONNECT:[ UseTime:0.107757s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:52:10+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.072716s ]
+[2020-09-24T17:52:10+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03' , `userSex` = '男' , `userAddress` = '北京市北京市东城区'  WHERE  `userID` = 1 [ RunTime:0.071677s ]
+[2020-09-24T17:52:10+08:00][sql] SELECT * FROM `user` [ RunTime:0.072407s ]
+[2020-09-24T17:52:22+08:00][sql] CONNECT:[ UseTime:0.116428s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T17:52:22+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076176s ]
+[2020-09-24T17:52:22+08:00][sql] UPDATE `user`  SET `userID` = 1 , `userName` = '钱钱钱' , `userBirthday` = '2020-09-03' , `userSex` = '男' , `userAddress` = '内蒙古自治区呼和浩特市新城区'  WHERE  `userID` = 1 [ RunTime:0.074992s ]
+[2020-09-24T17:52:22+08:00][sql] SELECT * FROM `user` [ RunTime:0.076337s ]
+[2020-09-24T18:05:59+08:00][sql] CONNECT:[ UseTime:0.103381s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T18:05:59+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.072463s ]
+[2020-09-24T18:05:59+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.069552s ]
+[2020-09-24T22:16:55+08:00][sql] CONNECT:[ UseTime:0.118209s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T22:16:55+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.081040s ]
+[2020-09-24T22:16:55+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079876s ]
+[2020-09-24T22:59:06+08:00][sql] CONNECT:[ UseTime:0.113872s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T22:59:06+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.073347s ]
+[2020-09-24T22:59:06+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.071881s ]
+[2020-09-24T22:59:06+08:00][sql] CONNECT:[ UseTime:0.127957s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T22:59:06+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.085294s ]
+[2020-09-24T22:59:06+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.084159s ]
+[2020-09-24T23:06:05+08:00][sql] CONNECT:[ UseTime:0.106351s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T23:06:05+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.072835s ]
+[2020-09-24T23:06:05+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.075007s ]
+[2020-09-24T23:06:05+08:00][sql] CONNECT:[ UseTime:0.131476s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T23:06:05+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.086479s ]
+[2020-09-24T23:06:05+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079686s ]
+[2020-09-24T23:08:43+08:00][sql] CONNECT:[ UseTime:0.115250s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T23:08:43+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079403s ]
+[2020-09-24T23:08:43+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.077221s ]
+[2020-09-24T23:31:17+08:00][sql] CONNECT:[ UseTime:0.114534s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-24T23:31:17+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079408s ]
+[2020-09-24T23:31:17+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.081093s ]

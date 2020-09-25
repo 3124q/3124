@@ -105,16 +105,16 @@ export default {
     // 登录验证
     handleLogin () {
       if (this.loginForm.username.length > 3 && this.loginForm.password.length > 4) {
-        if (this.loginForm.username === 'admin') {
-          if (this.loginForm.password === '123456') {
-            this.alertErr('欢迎您,管理员Admin', 'success')
-            this.$router.push('/Admin/home')
-          } else {
-            this.alertErr('密码错误', 'error')
-          }
-        } else {
-          this.alertErr('账号不存在', 'error')
-        }
+        this.$axios.
+          post("admin/adminlogin",{
+          username:this.loginForm.username,
+          password: this.loginForm.password
+        }).then(res=>{
+         alert(res.data.msg);
+         if (res.data.code=="1000"){
+           this.$router.replace({path: '/admin'})
+         }
+        })
       } else {
         this.alertErr('请检查账号密码输入是否符合规范', 'error')
       }
