@@ -235,8 +235,7 @@
         <el-dialog
           title="提示"
           :visible.sync="LogoutdialogVisible"
-          width="30%"
-          :before-close="handleClose">
+          width="30%">
           <span>是否退出登录？</span>
           <span slot="footer" class="dialog-footer">
             <el-button @click="LogoutdialogVisible = false">取 消</el-button>

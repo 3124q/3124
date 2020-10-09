@@ -106,8 +106,8 @@ export default {
     handleLogin () {
       if (this.loginForm.username.length > 3 && this.loginForm.password.length > 4) {
         this.$axios.
-          post("admin/adminlogin",{
-          username:this.loginForm.username,
+          post("admin/adminlogin/login",{
+          username: this.loginForm.username,
           password: this.loginForm.password
         }).then(res=>{
          alert(res.data.msg);

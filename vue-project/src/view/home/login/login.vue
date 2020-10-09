@@ -94,7 +94,8 @@
           if(response.data.code=='10211'){
             setTimeout(() => {
               this.$router.push({ path:'/index' });
-            }, 3000);
+            }, 2000);
+            localStorage.setItem('nowUser', response.data.nowUser);
             that.alertErr(response.data.msg,'success');
           }else{
             that.alertErr(response.data.msg,'error');

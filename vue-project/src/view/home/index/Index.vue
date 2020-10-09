@@ -526,7 +526,7 @@ export default {
   data () {
     return {
       // 当前用户
-      nowUser: false,
+      nowUser: true,
       // 二维码
       show2: false,
       Y1: 0, // 背景1Y轴偏移量
@@ -679,14 +679,9 @@ export default {
   },
   methods: {
     getNowUser: function (){
-      var that = this;
-      this.$axios.post('/index/index/getNowUsser').then(response => {
-        if(response.data.code=='10311'){
-          that.nowUser=true;
-        }else{
-          that.nowUser=false;
-        }
-      })
+      if(localStorage.getItem('nowUser')!=null){
+        this.nowUser = true;
+      }
     },
     /**
      * 背景视差偏移计算

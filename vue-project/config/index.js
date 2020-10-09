@@ -14,7 +14,7 @@ module.exports = {
       // 进行配置，开启跨域ajax交互
       '/api':{
         // ajax请求的第三方接口=>访问路口
-        target:'http://tp66.com/index.php',
+        target:'http://47.104.241.112/index.php',
         // 在本地创建一个虚拟服务端，发送请求数据同时接受=>服务端与服务端进行数据交互不存在跨域问题
         changeOrigin: true,
         // 路径重写=>配置访问路径/路由
