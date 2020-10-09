@@ -59,6 +59,7 @@ import banner_administration
   from "../view/admin/admin/administration/web_administration/resource_administration/banner_administration";
 import banner_pulish from "../view/admin/admin/administration/web_administration/resource_administration/banner_pulish";
 
+import echartPage from "../view/admin/admin/administration/echart/echartPage";
 Vue.use(Router)
 
 export default new Router({
@@ -128,7 +129,9 @@ export default new Router({
         { path: '/admin/activityAdministration',name: 'activity_administration',component: activity_administration},
         { path: '/admin/famouslyAdministration',name: 'famously_administration',component: famously_administration},
         { path: '/admin/businessAdministration',name: 'business_administration',component: business_administration},
-        { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration}
+        { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration},
+        { path: '/admin/echart',name: 'echart',component: echartPage}
+
       ]
     },
     {path:"/helpercenter/:id",name:'helpercenter',component:HelperCenter},

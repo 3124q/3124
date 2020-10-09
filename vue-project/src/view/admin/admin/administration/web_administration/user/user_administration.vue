@@ -11,9 +11,10 @@
     </el-header>
     <el-main>
       <el-table
-        :data="tableData"
+        :data="tableData.slice((currentPage-1)*pageSize,currentPage*pageSize)"
         :default-sort = "{prop: 'date', order: 'descending'}"
-        style="width: 100%">
+        style="width: 100%"
+        v-loading="loading">
         <el-table-column
           type="selection"
           width="55">
@@ -21,42 +22,45 @@
         <el-table-column type="expand">
           <template slot-scope="props">
             <el-form label-position="left" inline class="demo-table-expand">
-              <el-form-item label="商品名称">
-                <span>{{ props.row.name }}</span>
+              <el-form-item label="用户账号">
+                <span>{{ props.row.userAcc }}</span>
               </el-form-item>
-              <el-form-item label="所属店铺">
-                <span>{{ props.row.shop }}</span>
+              <el-form-item label="用户昵称">
+                <span>{{ props.row.userName }}</span>
               </el-form-item>
-              <el-form-item label="商品 ID">
-                <span>{{ props.row.id }}</span>
+              <el-form-item label="姓名">
+                <span>{{ props.row.userFullname }}</span>
               </el-form-item>
-              <el-form-item label="店铺 ID">
-                <span>{{ props.row.shopId }}</span>
+              <el-form-item label="性别">
+                <span>{{ props.row.userSex }}</span>
               </el-form-item>
-              <el-form-item label="商品分类">
-                <span>{{ props.row.category }}</span>
+              <el-form-item label="生日">
+                <span>{{ props.row.userBirthday }}</span>
               </el-form-item>
-              <el-form-item label="店铺地址">
-                <span>{{ props.row.address }}</span>
+              <el-form-item label="常住地">
+                <span>{{ props.row.userAddress }}</span>
               </el-form-item>
-              <el-form-item label="商品描述">
-                <span>{{ props.row.desc }}</span>
+              <el-form-item label="手机号">
+                <span>{{ props.row.userPhoneNum }}</span>
+              </el-form-item>
+              <el-form-item label="邮箱">
+                <span>{{ props.row.userEmail }}</span>
               </el-form-item>
             </el-form>
           </template>
         </el-table-column>
         <el-table-column
-          label="商品 ID"
-          prop="id"
+          label="用户 ID"
+          prop="userID"
           sortable>
         </el-table-column>
         <el-table-column
-          label="商品名称"
-          prop="name">
+          label="用户账号"
+          prop="userAcc">
         </el-table-column>
         <el-table-column
-          label="描述"
-          prop="desc">
+          label="用户状态"
+          prop="userState">
         </el-table-column>
         <el-table-column label="操作">
           <template slot="header" slot-scope="scope">
@@ -66,6 +70,9 @@
               v-model="search"
               size="mini"
               placeholder="输入关键字搜索"/>
+            <el-button
+              size="mini"
+              @click="searchuser">搜索</el-button>
           </template>
           <template slot-scope="scope">
             <el-button
@@ -74,7 +81,7 @@
             <el-button
               size="mini"
               type="primary"
-              @click="handleEdit(scope.$index, scope.row)">禁用</el-button>
+              v-on:click="open(scope.row.userID)">{{buttonState}}</el-button>
             <el-button
               size="mini"
               type="danger"
@@ -102,44 +109,36 @@
     name: "user_administration",
     data() {
       return {
-        total: 4,
+        buttonState:"",
+        total: 0,
         pageSize: 5,
         currentPage: 1,
         search: '',
-        tableData: [{
-          id: '12987122',
-          name: '好滋好味鸡蛋仔',
-          category: '江浙小吃、小吃零食',
-          desc: '荷兰优质淡奶，奶香浓而不腻',
-          address: '上海市普陀区真北路',
-          shop: '王小虎夫妻店',
-          shopId: '10333'
-        }, {
-          id: '12987123',
-          name: '好滋好味鸡蛋仔',
-          category: '江浙小吃、小吃零食',
-          desc: '荷兰优质淡奶，奶香浓而不腻',
-          address: '上海市普陀区真北路',
-          shop: '王小虎夫妻店',
-          shopId: '10333'
-        }, {
-          id: '12987125',
-          name: '好滋好味鸡蛋仔',
-          category: '江浙小吃、小吃零食',
-          desc: '荷兰优质淡奶，奶香浓而不腻',
-          address: '上海市普陀区真北路',
-          shop: '王小虎夫妻店',
-          shopId: '10333'
-        }, {
-          id: '12987126',
-          name: '好滋好味鸡蛋仔',
-          category: '江浙小吃、小吃零食',
-          desc: '荷兰优质淡奶，奶香浓而不腻',
-          address: '上海市普陀区真北路',
-          shop: '王小虎夫妻店',
-          shopId: '10333'
-        }]
+        loading: false,
+        tableData:[],
       }
+    },
+    mounted() {
+      this.loading=true
+    },
+    created() {
+      var that=this;
+      this.$axios.get("admin/userlist").then(
+        res=>{
+          that.loading=false;
+          console.log(res.data);
+          that.tableData=res.data;
+          that.total=res.data.length;
+          for (var i=0;i<res.data.length;i++){
+            if (res.data[i].userState=="正常"){
+              that.buttonState="禁用";
+            }else{
+              that.buttonState="解锁"
+            }
+          }
+
+        }
+      )
     },
     methods: {
       handleSizeChange(val) {
@@ -153,7 +152,73 @@
       },
       handleDelete(index, row) {
         console.log(index, row);
-      }
+      },
+      searchuser(){
+        var that=this;
+        that.loading=true;
+        this.$axios.post("admin/searchuser",{key:that.search}).then(res=>{
+          if (res.data.code==1000){
+            that.loading=false;
+            console.log(res.data);
+            that.tableData=res.data.data;
+            that.total=res.data.data.length;
+          }else{
+            that.loading=false;
+            alert(res.data.msg);
+          }
+        })
+      },
+      open(id) {
+        var that=this;
+        const h = this.$createElement;
+        this.$msgbox({
+          title: '消息',
+          message: h('p', null, [
+            h('span', null, '您的操作将限制该用户的所有操作 '),
+            h('i', { style: 'color: teal' }, '是否继续？')
+          ]),
+          showCancelButton: true,
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          beforeClose: (action, instance, done) => {
+            if (action === 'confirm') {
+              instance.confirmButtonLoading = true;
+              instance.confirmButtonText = '执行中...';
+              this.$axios.post("admin/banuser",{"userID":id}).then(
+                res=>{
+                  console.log(res);
+                  instance.confirmButtonLoading = false;
+                  alert(res.data.msg);
+
+                  console.log(res.data.code);
+                  if (res.data.code=="1000"){
+                    done();
+                    for (var i=0;i<res.data.data.length;i++){
+                      if (res.data.data[i].userState=="正常"){
+                        that.buttonState="禁用";
+                      }else{
+                        that.buttonState="解锁"
+                      }
+                    }
+
+                    that.tableData=res.data.data;
+                  }
+                }
+              );
+            } else {
+              done();
+            }
+          }
+        }).then(action => {
+          this.$message({
+            type: 'info',
+            message: 'action: ' + action
+          });
+        });
+      },
+      // banuser(id){
+      //   var that=this
+      // }
     }
   }
 </script>
