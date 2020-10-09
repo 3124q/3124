@@ -61,3 +61,24 @@
 [2020-09-25T03:47:50+08:00][sql] CONNECT:[ UseTime:0.126738s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
 [2020-09-25T03:47:50+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.117253s ]
 [2020-09-25T03:47:50+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.085096s ]
+[2020-09-25T15:09:42+08:00][sql] CONNECT:[ UseTime:0.144789s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-25T15:09:42+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.097825s ]
+[2020-09-25T15:09:42+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.114700s ]
+[2020-09-25T15:11:53+08:00][sql] CONNECT:[ UseTime:0.110922s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-25T15:11:53+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.076040s ]
+[2020-09-25T15:11:53+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.073630s ]
+[2020-09-25T15:13:05+08:00][sql] CONNECT:[ UseTime:0.102087s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-25T15:13:05+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.069896s ]
+[2020-09-25T15:13:05+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.070053s ]
+[2020-09-25T15:13:13+08:00][sql] CONNECT:[ UseTime:0.115202s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-25T15:13:13+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.079145s ]
+[2020-09-25T15:13:13+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.079318s ]
+[2020-09-25T15:15:08+08:00][sql] CONNECT:[ UseTime:0.103529s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-25T15:15:08+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.071039s ]
+[2020-09-25T15:15:08+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.070037s ]
+[2020-09-25T15:15:40+08:00][sql] CONNECT:[ UseTime:0.126731s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-25T15:15:40+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.126622s ]
+[2020-09-25T15:15:40+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.083273s ]
+[2020-09-25T15:19:06+08:00][sql] CONNECT:[ UseTime:0.137663s ] mysql:host=47.104.241.112;port=3306;dbname=Travel;charset=utf8
+[2020-09-25T15:19:06+08:00][sql] SHOW FULL COLUMNS FROM `user` [ RunTime:0.093618s ]
+[2020-09-25T15:19:06+08:00][sql] SELECT * FROM `user` WHERE  `userID` = 1 [ RunTime:0.092535s ]

@@ -15,14 +15,14 @@
                 <li class="row">
                   <ul>
                     <li><span class="row_title">xx网账号</span></li>
-                    <li><input type="text"></li>
+                    <li><input type="text" v-model="complaint.account" placeholder="请输入您在本网站注册的账号"></li>
                     <li><span>还没有注册账号？点击 </span><router-link to="" style="color: #00a3d2">注册</router-link></li>
                   </ul>
                 </li>
                 <li class="row">
                   <ul>
                     <li><span class="row_title">类型</span></li>
-                    <li><select name="" id="">
+                    <li><select name="" id="" v-model="complaint.type">
                       <option value="酒店产品">酒店产品</option>
                       <option value="旅行团产品">旅行团产品</option>
                       <option value="门票产品">门票产品</option>
@@ -33,26 +33,26 @@
                 <li class="row">
                   <ul>
                       <li>
-                        <span class="row_title">联系人</span>
+                        <span class="row_title" >联系人</span>
                       </li>
                     <li>
-                      <input type="text">
+                      <input type="text" v-model="complaint.contact" placeholder="请输入您的姓名">
                     </li>
                     <li>
                       <span class="row_title">联系方式</span>
                     </li>
                     <li>
-                      <input type="text">
+                      <input type="text"  v-model="complaint.phonenum" placeholder="请输入可以联系到您的手机号">
                     </li>
                     <li>
                       <span class="row_title">联系邮箱</span>
                     </li>
                     <li>
-                      <input type="text">
+                      <input type="text" v-model="complaint.email" placeholder="请输入您的邮箱">
                     </li>
                   </ul>
                 </li>
-                <li class="row">
+                <li class="row" style="height: 130px">
                   <ul>
                     <li ><span class="row_title">内容</span></li>
                     <li >
@@ -60,7 +60,7 @@
                         <div class="limitword">
                           还可输入 <span class="num">1000</span>字
                         </div>
-                        <textarea name="" id="" cols="30" rows="10">
+                        <textarea name="" id=""  cols="30" rows="10" v-model="complaint.content" placeholder="请输入您想要反馈的内容">
 
                         </textarea>
                     </div>
@@ -69,6 +69,7 @@
 
                 </li>
               </ul>
+                <div class="submit"><button v-on:click="sendcomplaint">提交</button></div>
               </div>
             </el-tab-pane>
             <el-tab-pane label="联系客服" name="3">联系客服</el-tab-pane>
@@ -90,12 +91,30 @@
       },
       data() {
         return {
-          activeName: '2'
+          activeName: '2',
+          complaint:{
+            account:"",
+            type:"",
+            contact:"",
+            phonenum:"",
+            email:"",
+            content:""
+          }
         };
       },
       methods: {
         handleClick(tab, event) {
           console.log(tab, event);
+        },
+        sendcomplaint(){
+          var that=this;
+          console.log(this.complaint);
+          this.$axios.post("index/sendcomplaint",that.complaint).then(
+            res=>{
+              console.log(res.data);
+              alert(res.data.msg)
+            }
+          )
         }
       },
       mounted() {
@@ -157,7 +176,7 @@
   }
   .detail{
     width: 100%;
-    height:300px;
+    height:320px;
 
   }
   .detail .row{
@@ -215,5 +234,15 @@
     color: #b1b1b1;
     resize: vertical;
   }
-
+.submit{
+  height: 50px;
+  line-height: 50px;
+}
+  .submit button{
+    width: 120px;
+    height: 30px;
+    background-color:  #df5000;
+    border: none;
+    color: #fff;
+  }
 </style>

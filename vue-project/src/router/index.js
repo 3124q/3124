@@ -47,6 +47,7 @@ import hotel_comment from "../view/admin/admin/administration/business_administr
 
 import Scenic from "../view/home/famously_details/Scenic";
 import Selfdrive from "../view/home/famously_details/Selfdrive";
+import echartPage from "../view/admin/admin/administration/echart/echartPage";
 Vue.use(Router)
 
 export default new Router({
@@ -95,7 +96,7 @@ export default new Router({
         { path: '/admin/home',name: 'home_page',component: home_page },
         { path: '/admin/personalCenter',name: 'personal_center',component: personal_center },
         { path: '/admin/safetyCenter',name: 'safety_center',component: safety_center },
-        { path: '/admin/notice',name: 'notice',component: web_notice },
+        { path: '/admin/notice/',name: 'notice',component: web_notice },
         { path: '/admin/userAdministration',name: 'user_administration',component: user_administration },
         { path: '/admin/authority',name: 'authority_administration',component: authority_administration},
         { path: '/admin/newAdministrator',name: 'new_administrator',component: new_administrator},
@@ -110,7 +111,9 @@ export default new Router({
         { path: '/admin/hotelOomment',name: 'hotel_comment',component: hotel_comment},
         { path: '/admin/famouslyAdministration',name: 'famously_administration',component: famously_administration},
         { path: '/admin/businessAdministration',name: 'business_administration',component: business_administration},
-        { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration}
+        { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration},
+        { path: '/admin/echart',name: 'echart',component: echartPage}
+
       ]
     },
     {path:"/helpercenter/:id",name:'helpercenter',component:HelperCenter},

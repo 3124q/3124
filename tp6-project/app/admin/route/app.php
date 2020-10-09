@@ -1,3 +1,26 @@
 <?php
 use think\facade\Route;
 Route::post("adminlogin","adminlogin/Login");
+Route::get("adminlogout","admin/adminlogout");
+Route::get("getnowuser","admin/getnowuser");
+Route::get("userlist","useradmin/userlist");
+Route::post("searchuser","useradmin/searchuser");
+Route::post("banuser","useradmin/banuser");
+Route::get("powerlist","adminpower/powerlist");
+Route::get("allpower","adminpower/allpower");
+Route::post("setpower","adminpower/setpower");
+Route::post("getpower","adminpower/getpower");
+Route::post("addposition","adminpower/addposition");
+Route::post("moveoutposition","adminpower/moveoutposition");
+Route::post("changeposition","adminpower/changeposition");
+Route::get("getposition","echart/getposition");
+Route::get("getsellcount","echart/getsellcount");
+Route::get("getsellmoney","echart/getsellmoney");
+Route::get("registcount","echart/registcount");
+Route::get("getunread","admincomplaint/getunread");
+Route::post("getdetail","admincomplaint/getdetail");
+Route::post("haveread","admincomplaint/haveread");
+Route::post("deletecomplaint","admincomplaint/deletecomplaint");
+Route::post("clearcomplaint","admincomplaint/clearcomplaint");
+Route::get("getdelete","admincomplaint/getdelete");
+Route::get("getread","admincomplaint/getread");

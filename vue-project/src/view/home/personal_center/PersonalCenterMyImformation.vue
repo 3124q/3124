@@ -123,11 +123,12 @@
       :before-close="handleClose">
       <el-upload
         class="avatar-uploader"
-        action=""
+        action="https://jsonplaceholder.typicode.com/posts/"
         :show-file-list="true"
-        :on-success="handleAvatarSuccess"
+        :auto-upload=false
+        :on-change="handleAvatarChange"
         :before-upload="beforeAvatarUpload">
-        <img v-if="imageUrl" :src="imageUrl" class="avatar">
+        <img v-if="imageUrl" v-bind:src="imageUrl" class="avatar">
         <i v-else class="el-icon-plus avatar-uploader-icon"></i>
       </el-upload>
       <span slot="footer" class="dialog-footer">
@@ -146,6 +147,7 @@
         data(){
           return{
             imageUrl: '',
+            tempUrl: '',
             dialogVisible: false,
             userimg:"https://img2.woyaogexing.com/2020/09/24/8d134c18c15a413aadaa52963f587ba4!400x400.jpeg",
             newusername:"",
@@ -198,14 +200,38 @@
             })
             .catch(_ => {});
         },
-
-        handleAvatarSuccess(res, file) {
-          this.imageUrl = URL.createObjectURL(file.raw);
+        //将上传图片的原路径赋值给临时路径
+        handleAvatarChange(res, file) {
+          this.imageUrl = file.raw;
+          console.log(file.raw)
         },
-        beforeAvatarUpload(file) {
+        handleAvatarSuccess(res, file) {
+          this.imageUrl = file.raw;
+        },
+        uploadImg(item){
+          let app=this;
+          let myfile=new FormData();
+          myfile.append('file',item.file);
+          app.$Api.fileUpload(myfile,function (result) {
+            if (result.result=="true"){
+              app.$notify.success({
+                title: '温馨提示：',
+                message: result.message,
+              })
+              App.imageUrl = App.tempUrl;
+              //将后台传来的数据库图片路径赋值给car对象的图片路径
+              App.car.carImg = result.imgUrl;
+            } else {
+              App.$notify.error({
+                title: '温馨提示：',
+                message: result.message,
+              });
+            }
+          })
+        },
+        beforeAvatarUpload(res,file) {
           const isJPG = file.type === 'image/jpeg';
           const isLt2M = file.size / 1024 / 1024 < 2;
-
           if (!isJPG) {
             this.$message.error('上传头像图片只能是 JPG 格式!');
           }
