@@ -47,6 +47,18 @@ import hotel_comment from "../view/admin/admin/administration/business_administr
 
 import Scenic from "../view/home/famously_details/Scenic";
 import Selfdrive from "../view/home/famously_details/Selfdrive";
+import personal_center_home from "../view/home/personal_center/personal_center_home";
+import activity_pulish
+  from "../view/admin/admin/administration/web_administration/propaganda/activity_pulish";
+import activity_administration
+  from "../view/admin/admin/administration/web_administration/propaganda/activity_administration";
+import notice_pulish from "../view/admin/admin/administration/account_administration/notice_pulish";
+import hotel_administration
+  from "../view/admin/admin/administration/business_administration/hotel/hotel_administration";
+import banner_administration
+  from "../view/admin/admin/administration/web_administration/resource_administration/banner_administration";
+import banner_pulish from "../view/admin/admin/administration/web_administration/resource_administration/banner_pulish";
+
 Vue.use(Router)
 
 export default new Router({
@@ -108,6 +120,12 @@ export default new Router({
         { path: '/admin/roomPulish',name: 'room_publish',component: room_pulish},
         { path: '/admin/roomAdministration',name: 'room_administration',component: room_administration},
         { path: '/admin/hotelOomment',name: 'hotel_comment',component: hotel_comment},
+        { path: '/admin/noticePulish',name: 'notice_pulish',component: notice_pulish},
+        { path: '/admin/hotel_administration',name: 'hotel_administration',component: hotel_administration},
+        { path: '/admin/activityPublish',name: 'activity_pulish',component: activity_pulish},
+        { path: '/admin/banner_pulish',name: 'banner_pulish',component: banner_pulish},
+        { path: '/admin/banner_administration',name: 'banner_administration',component: banner_administration},
+        { path: '/admin/activityAdministration',name: 'activity_administration',component: activity_administration},
         { path: '/admin/famouslyAdministration',name: 'famously_administration',component: famously_administration},
         { path: '/admin/businessAdministration',name: 'business_administration',component: business_administration},
         { path: '/admin/administrators',name: 'administrators_administration',component: administrators_administration}
@@ -120,6 +138,11 @@ export default new Router({
         name:'myimformation',
         component :PersonalCenterMyImformation
       },
+        {
+          path:'/personalcenter/home',
+          name:'personal_center_home',
+          component :personal_center_home
+        },
         {
           path:'/setemail',
           name:'setemail',
@@ -174,12 +197,12 @@ export default new Router({
       ]
     },
     {
-      path: '/homeLogin',
+      path: '/home/login',
       name: 'homeLogin',
       component: homeLogin
     },
     {
-      path: '/homeEnroll',
+      path: '/home/enroll',
       name: 'homeEnroll',
       component: homeEnroll
     },

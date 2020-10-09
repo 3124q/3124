@@ -5,40 +5,38 @@
         <el-breadcrumb-item>
           <i class="iconfont el-ico-xtongzhi"> 后台管理</i>
         </el-breadcrumb-item>
-        <el-breadcrumb-item>景点管理</el-breadcrumb-item>
-        <el-breadcrumb-item>景点评论</el-breadcrumb-item>
+        <el-breadcrumb-item>酒店管理</el-breadcrumb-item>
+        <el-breadcrumb-item>酒店评论</el-breadcrumb-item>
       </el-breadcrumb>
     </el-header>
     <el-main>
       <el-table
+        ref="filterTable"
         :data="tableData"
         style="width: 100%">
-        <el-table-column type="expand">
-          <template slot-scope="props">
-            <el-form label-position="left" inline class="demo-table-expand">
-              <el-form-item label="评论内容">
-                <span>{{ props.row.content }}</span>
-              </el-form-item>
-            </el-form>
-          </template>
+        <el-table-column
+          prop="name"
+          label="评论用户"
+          width="180">
         </el-table-column>
         <el-table-column
-          label="日期："
-          prop="date">
+          prop="date"
+          label="评论时间"
+          sortable
+          width="180"
+          column-key="date"
+        >
         </el-table-column>
         <el-table-column
-          label="评论人："
-          prop="name">
-        </el-table-column>
-        <el-table-column
-          label="账号"
-          prop="account">
+          prop="address"
+          label="评论内容"
+          :formatter="formatter">
         </el-table-column>
         <el-table-column
           prop="tag"
-          label="标签"
+          label="评分"
           width="100"
-          :filters="[{ text: '家', value: '家' }, { text: '公司', value: '公司' }]"
+          :filters="[{ text: '差评（1星）', value: '差评（1星）' }, { text: '良好(2-4星)', value: '良好(2-4星)' }, { text: '好评(5星)', value: '好评(5星)' }]"
           :filter-method="filterTag"
           filter-placement="bottom-end">
           <template slot-scope="scope">
@@ -50,24 +48,13 @@
         <el-table-column label="操作">
           <template slot-scope="scope">
             <el-button
-              size="mini">编辑</el-button>
+              size="mini">回复</el-button>
             <el-button
               size="mini"
               type="danger">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
-      <el-row style="margin-top: 15px;">
-        <el-pagination
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          :current-page="currentPage"
-          :page-sizes="[5, 10, 15, 20]"
-          :page-size="pageSize"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="total">
-        </el-pagination>
-      </el-row>
     </el-main>
   </el-container>
 </template>

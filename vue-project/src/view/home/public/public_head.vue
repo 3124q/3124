@@ -23,6 +23,5 @@
     width: 1200px;
     height: 116px;
     margin: 0 auto;
-    background-color: #55a532;
   }
 </style>

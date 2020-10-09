@@ -6,22 +6,20 @@
           <li style="padding-left: 5px" v-if="!isLogin"><span>或</span><router-link to="" class="regBtn">免费注册</router-link></li>
           <li v-if="isLogin"><span>欢迎您,</span><router-link to=""  class="nowuser" >{{nowuser}}</router-link></li>
             <li><span>|</span><router-link to=""><i class="iconfont">&#xe70f;</i><span>消息</span></router-link>  </li>
-          <li><span>|</span><router-link to="">
-            <el-dropdown>
-  <span class="el-dropdown-link">
-    查看订单<i class="el-icon-arrow-down el-icon--right"></i>
-  </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>景点门票订单</el-dropdown-item>
-                <el-dropdown-item>酒店预订订单</el-dropdown-item>
-                <el-dropdown-item>旅行团订单</el-dropdown-item>
-
-              </el-dropdown-menu>
-            </el-dropdown>
-
-
-
-          </router-link></li>
+          <li><span>|</span>
+            <router-link to="">
+              <el-dropdown>
+                <span class="el-dropdown-link">
+                  查看订单<i class="el-icon-arrow-down el-icon--right"></i>
+                </span>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item>景点门票订单</el-dropdown-item>
+                  <el-dropdown-item>酒店预订订单</el-dropdown-item>
+                  <el-dropdown-item>旅行团订单</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+            </router-link>
+          </li>
           <li><span>|</span><router-link to=""><span>我的账户</span></router-link></li>
           <li><span>|</span><router-link to=""><span>联系客服</span></router-link></li>
           <li><span>|</span><i class="iconfont" style="padding-right: 21px ;color: #00bcd4">&#xe72f;</i><i class="iconfont" style="color: #55a532">&#xe614;</i></li>
@@ -31,15 +29,15 @@
 </template>
 
 <script>
-    export default {
-        name: "public_head_nav",
-        data(){
-          return{
-            isLogin:false,
-            nowuser:'123456'
-          }
-        }
+  export default {
+    name: "public_head_nav",
+    data(){
+      return{
+        isLogin:false,
+        nowuser:'123456'
+      }
     }
+  }
 </script>
 
 <style scoped>
@@ -50,17 +48,14 @@
     color:#00a3d2;
   }
   #public_head_nav{
-    /*box-sizing: border-box;*/
     width: 100%;
     margin: 0 auto;
     height:42px;
-    /*background-color: #55a532;*/
   }
   .headnav{
     width: 75%;
     height: 36px;
     float: right;
-    /*background-color: #ee9900;*/
   }
   .headnav ul{
     list-style: none;
@@ -73,7 +68,6 @@
     font-weight: 400;
   }
   .headnav ul li{
-    /*box-sizing: border-box;*/
     float: left;
     padding: 0 11px 0 0;
   }

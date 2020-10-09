@@ -75,7 +75,6 @@
               <router-link to="/admin/userAdministration">
                 <el-menu-item index="2-1">用户列表</el-menu-item>
               </router-link>
-              <el-menu-item index="2-2">博客管理</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group>
               <template slot="title">商家管理</template>
@@ -105,19 +104,12 @@
               <span slot="title">推广活动</span>
             </template>
             <el-menu-item-group>
-              <template slot="title">平台活动</template>
-              <el-menu-item index="3-1">活动发布</el-menu-item>
-              <el-menu-item index="3-2">活动管理</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <template slot="title">商家活动</template>
-              <el-menu-item index="3-3">活动审核</el-menu-item>
-              <el-menu-item index="3-4">活动管理</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <template slot="title">宣传推广</template>
-              <el-menu-item index="3-5">广告推广</el-menu-item>
-              <el-menu-item index="3-6">广告管理</el-menu-item>
+              <router-link to="/admin/activityPublish">
+                <el-menu-item index="3-1">活动发布</el-menu-item>
+              </router-link>
+              <router-link to="/admin/activityAdministration">
+                <el-menu-item index="3-2">活动管理</el-menu-item>
+              </router-link>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="4" class="one_bar">
@@ -135,13 +127,16 @@
           <el-submenu index="5" class="one_bar">
             <template slot="title">
               <i class="iconfont el-ico-xtongzhi"></i>
-              <span slot="title">通知</span>
+              <span slot="title">平台通知</span>
             </template>
-            <router-link to="/admin/notice">
-              <el-menu-item index="5-1">已读消息</el-menu-item>
+            <router-link to="/admin/noticePulish">
+              <el-menu-item index="5-1">发布系统通知</el-menu-item>
             </router-link>
-            <el-menu-item index="5-2">未读消息</el-menu-item>
-            <el-menu-item index="5-2">消息回收站</el-menu-item>
+            <router-link to="/admin/notice">
+              <el-menu-item index="5-2">已读消息</el-menu-item>
+            </router-link>
+            <el-menu-item index="5-3">未读消息</el-menu-item>
+            <el-menu-item index="5-4">消息回收站</el-menu-item>
           </el-submenu>
           <el-menu-item index="6" class="one_bar">
             <i class="iconfont el-ico-xtubiao"></i>
@@ -158,16 +153,10 @@
             <router-link to="/admin/famouslyAdministration">
               <el-menu-item index="7-2">景点管理</el-menu-item>
             </router-link>
-            <el-menu-item index="7-3">景点活动</el-menu-item>
             <router-link to="/admin/famouslyCommnet">
               <el-menu-item index="7-4">景点评论</el-menu-item>
             </router-link>
-            <el-menu-item index="7-5">官方博客</el-menu-item>
             <el-menu-item index="7-6">景点客服</el-menu-item>
-            <el-menu-item index="7-7">景点旅游团</el-menu-item>
-            <router-link to="/admin/famouslyPropaganda">
-              <el-menu-item index="7-8">宣传广告</el-menu-item>
-            </router-link>
           </el-submenu>
           <el-submenu index="8" class="one_bar">
             <template slot="title">
@@ -177,19 +166,53 @@
             <router-link to="/admin/hotel_pulish">
               <el-menu-item index="8-1">酒店发布</el-menu-item>
             </router-link>
-            <el-menu-item index="8-2">酒店管理</el-menu-item>
+            <router-link to="/admin/hotel_administration">
+              <el-menu-item index="8-2">酒店管理</el-menu-item>
+            </router-link>
             <router-link to="/admin/roomPulish">
               <el-menu-item index="8-3">房间发布</el-menu-item>
             </router-link>
             <router-link to="/admin/roomAdministration">
               <el-menu-item index="8-4">房间管理</el-menu-item>
             </router-link>
-            <el-menu-item index="8-5">酒店活动</el-menu-item>
             <router-link to="/admin/hotelOomment">
-              <el-menu-item index="8-6">酒店评价</el-menu-item>
+              <el-menu-item index="8-6">酒店评论</el-menu-item>
             </router-link>
             <el-menu-item index="8-7">酒店客服</el-menu-item>
-            <el-menu-item index="8-8">宣传广告</el-menu-item>
+          </el-submenu>
+          <el-submenu index="9" class="one_bar">
+            <template slot="title">
+              <i class="iconfont el-ico-xjiudian-copy"></i>
+              <span slot="title">旅游社管理</span>
+            </template>
+            <el-menu-item index="9-1">路线发布</el-menu-item>
+            <el-menu-item index="9-2">路线管理</el-menu-item>
+            <el-menu-item index="9-3">价格管理</el-menu-item>
+            <el-menu-item index="9-4">路线评论</el-menu-item>
+            <el-menu-item index="9-5">路线活动</el-menu-item>
+          </el-submenu>
+          <el-submenu index="10" class="one_bar">
+            <template slot="title">
+              <i class="iconfont el-ico-xjiudian-copy"></i>
+              <span slot="title">资源管理</span>
+            </template>
+            <router-link to="/admin/banner_pulish">
+              <el-menu-item index="10-1">广告发布</el-menu-item>
+            </router-link>
+            <router-link to="/admin/banner_administration">
+              <el-menu-item index="10-2">广告管理</el-menu-item>
+            </router-link>
+          </el-submenu>
+          <el-submenu index="11" class="one_bar">
+            <template slot="title">
+              <i class="iconfont el-ico-xjiudian-copy"></i>
+              <span slot="title">智能客服</span>
+            </template>
+            <el-menu-item index="11-1">问候语设置</el-menu-item>
+            <el-menu-item index="11-2">常见问题及回复</el-menu-item>
+            <el-menu-item index="11-3">历史记录</el-menu-item>
+            <el-menu-item index="11-4">留言查看</el-menu-item>
+            <el-menu-item index="11-5">客服列表</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>

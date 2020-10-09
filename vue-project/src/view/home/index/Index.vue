@@ -61,7 +61,12 @@
               <p>旅行是一个过程，一次发现。是一个自我发现的过程。真正的旅行让我们直面自我。</p>
             </el-col>
             <el-col :span="6" style="line-height: 20vh">
-              <el-button class="enroll_btn" type="primary" round>注册账号</el-button>
+              <router-link :to="nowUser ? '/home/enroll' : '/personalcenter/home'">
+                <el-button class="enroll_btn" type="primary" round>
+                  <span v-if="nowUser==false">个人中心</span>
+                  <span v-if="nowUser==true">注册账号</span>
+                </el-button>
+              </router-link>
             </el-col>
           </el-col>
         </el-row>
@@ -128,46 +133,46 @@
               <el-col class="recommend_item" :span="14" style="margin: 0 1%;">
                 <el-col class="recommend_first" :span="14">
                   <div style="height: 70%;">
-                    <img class="recommend_img" src="https://cdn.gootoai.com/files/5uimg/mudidi/yunnan/190210/21-1Z21013004aU.jpg?imageView2/1/w/482/h/226/q/85">
+                    <img class="recommend_img" :src="firstScenic.scenic_img_url">
                   </div>
                   <div class="recommend_first_box" style="height: 30%;">
-                    <p class="recommend_detail">A11: 2日激情浪漫游 (大峡谷玻璃桥+凤凰古城)</p>
-                    <h3 class="recommend_price">￥ 88.00 /人</h3>
+                    <p class="recommend_detail">{{ firstScenic.scenic_name }}</p>
+                    <h3 class="recommend_price">￥ {{ firstScenic.scenic_price }} /人</h3>
                   </div>
                 </el-col>
                 <el-col :span="10" style="height: 100%;">
                   <el-row class="recommend_second">
-                    <img class="recommend_img" src="https://cdn.gootoai.com/files/5uimg/line/guizhou/190702/12-1ZF2145614414.jpg?imageView2/1/w/237/h/136/q/85">
+                    <img class="recommend_img" :src="secondScenic.scenic_img_url">
                     <div class="recommend_second_box" style="height: 30%;">
-                      <p class="recommend_detail" style="font-size: 80%">A11: 2日激情浪漫游 (大峡谷玻璃桥+凤凰古城)</p>
-                      <h3 class="recommend_price" style="margin: -10px 10px;">￥ 88.00/人</h3>
+                      <p class="recommend_detail" style="font-size: 80%">{{ secondScenic.scenic_name }}</p>
+                      <h3 class="recommend_price" style="margin: -10px 10px;">￥ {{ secondScenic.scenic_price }}/人</h3>
                     </div>
                   </el-row>
                   <el-col class="recommend_third" :span="12" style="padding-left: 0">
-                    <img class="recommend_img" style="height: 100%" src="https://cdn.gootoai.com/files/5uimg/youji/guizhou/190719/73-1ZG91F212419.jpg?imageView2/1/w/237/h/136/q/85">
+                    <img class="recommend_img" style="height: 100%" :src="thirdScenic.scenic_img_url">
                     <div class="recommend_third_box">
-                      <p class="recommend_third_title">北京</p>
-                      <p class="recommend_third_price">￥ 88.00/人</p>
+                      <p class="recommend_third_title">{{ thirdScenic.scenic_add }}</p>
+                      <p class="recommend_third_price">￥ {{ thirdScenic.scenic_price }}/人</p>
                     </div>
                   </el-col>
                   <el-col class="recommend_third" :span="12" style="padding-right: 0">
-                    <img class="recommend_img" style="height: 100%" src="https://cdn.gootoai.com/files/5uimg/youji/hainan/190817/12-1ZQG54955H1.jpg?imageView2/1/w/237/h/136/q/85">
+                    <img class="recommend_img" style="height: 100%" :src="forthScenic.scenic_img_url">
                     <div class="recommend_third_box">
-                      <p class="recommend_third_title">成都</p>
-                      <p class="recommend_third_price">￥ 88.00/人</p>
+                      <p class="recommend_third_title">{{ forthScenic.scenic_add }}</p>
+                      <p class="recommend_third_price">￥ {{ forthScenic.scenic_price }}/人</p>
                     </div>
                   </el-col>
                 </el-col>
               </el-col>
               <el-col class="recommend_item" :span="4">
                 <el-carousel direction="vertical" :autoplay="false">
-                  <el-carousel-item v-for="item in 3" :key="item">
+                  <el-carousel-item v-for="(item,i) in activity_array" :key="i">
                     <el-row class="recommend_propaganda">
-                      <img class="recommend_medium" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600978669294&di=22984319db252bf7eb51388398285517&imgtype=0&src=http%3A%2F%2Fpic321.nipic.com%2Ffile%2F20200901%2F12086568_091856838083_2.jpg">
+                      <img class="recommend_medium" :src=item.activity_background>
                       <el-row class="recommend_out_box">
                         <el-row class="recommend_center">
-                          <p>活动时间：2020/10/1-2020/10/8</p>
-                          <p>活动详情：国庆中秋小长假进入倒计时，各类促文旅消费新举措纷至沓来，地方频频施展“抢客”大招，线上旅游企业大力促销蓄势待发。</p>
+                          <p>活动时间：{{ item.activity_time }}</p>
+                          <p>活动详情：{{ item.activity_details }}</p>
                         </el-row>
                       </el-row>
                     </el-row>
@@ -183,17 +188,20 @@
                 </el-col>
               </el-col>
               <el-col class="recommend_item recommend_blog" :span="17">
-                <el-col :span="6" v-for="(i, index) in 4" :key="i">
-                  <el-card :body-style="{ padding: '0px' }" shadow="never">
-                    <img src="https://cdn.gootoai.com/files/5uimg/gonglue/hunan/190918/12-1Z91QJ33N39.jpg?imageView2/1/w/237/h/136/q/85">
+                <el-col :span="6" v-for="(item, i) in blog_array" :key="i" style="padding: 0 3px;">
+                  <el-card :body-style="{ padding: '0px' }" shadow="hover">
+                    <el-image
+                      style="width: 100%; height: 135px"
+                      :src=item.blog_img
+                      fit="fill"></el-image>
                     <div>
-                      <span class="recommend_blog_title">张家界冬季自驾游、自助游攻略</span>
+                      <span class="recommend_blog_title">{{ item.blog_name }}</span>
                       <el-row>
-                        <el-col :span="8" style="margin-top: 16px">
-                          <span class="recommend_blog_read">99人阅读</span>
+                        <el-col :span="10" style="margin-top: 16px">
+                          <span class="recommend_blog_read">{{ item.blog_read_num }}人阅读</span>
                         </el-col>
-                        <el-col :span="4" :offset="8" style="margin-top: 20px">
-                          <span class="recommend_blog_time">2020/9/25</span>
+                        <el-col :span="4" :offset="6" style="margin-top: 20px">
+                          <span class="recommend_blog_time">{{ item.blog_time }}</span>
                         </el-col>
                       </el-row>
                     </div>
@@ -216,16 +224,16 @@
             </el-tabs>
           </el-row>
           <el-row class="accordion__ul">
-            <el-col class="accordion__li" v-for="(item,i) in tableData" :key="i" :class="item.open ? 'accordion_hover' : 'accordion_leave'">
+            <el-col class="accordion__li" v-for="(item,i) in tour_group_array" :key="i" :class="item.open ? 'accordion_hover' : 'accordion_leave'">
               <el-col class="accordion_img_box">
-                <img :src= item.image_url class="accordion_img" @mouseenter="enter(i)">
+                <img :src= item.tour_group_image_url class="accordion_img" @mouseenter="enter(i)">
               </el-col>
               <el-col>
                 <transition name="el-zoom-in-center">
                   <div class="accordion_info" :class="item.open ? 'show' : 'hidden'" v-show="item.open">
                     <el-row class="accordion_center">
                       <el-col class="accordion_item_1">
-                        <span>￥ 2000</span>
+                        <span>￥ {{ item.tour_group_price }}</span>
                       </el-col>
                       <el-divider class="accordion_divider"></el-divider>
                       <el-col class="accordion_item_2">
@@ -238,7 +246,7 @@
               <el-col>
                 <transition name="el-zoom-in-bottom">
                   <div class="accordion_detail" :class="item.open ? 'show' : 'hidden'" v-show="item.open">
-                    <el-col :span="17" :offset="1"> 【尊享西藏】西藏七日游线路：拉萨+布达拉宫+八角街+巴松措+鲁朗林海+苯日神山+卡定沟+羊卓雍措 </el-col>
+                    <el-col :span="17" :offset="1"> {{ item.tour_group_details }} </el-col>
                     <el-col :span="5" :offset="1">
                       <el-button type="primary" plain>立即报名</el-button>
                     </el-col>
@@ -248,7 +256,7 @@
               <el-col>
                 <div class="accordion_mini_title" :class="item.open ? 'hidden' : 'show'" @mouseenter="enter(i)">
                   <el-col :span="24" style="position: absolute;bottom: 0;">
-                    <p style="font-size: 130%;font-weight: 600">西藏·拉萨</p>
+                    <p style="font-size: 130%;font-weight: 600">{{ item.tour_group_add }}</p>
                     <p>拉萨集合</p>
                   </el-col>
                 </div>
@@ -260,16 +268,16 @@
           <el-col class="propaganda_title" :span="23" :offset="1">特色宣传</el-col>
           <el-col style="margin-top: 10px;">
             <el-col :span="11" :offset="1">
-              <img src="https://cdn.gootoai.com/skin/pc/static/picture/52711533544787.jpg">
-            </el-col>
-            <el-col :span="11">
               <img src="https://cdn.gootoai.com/skin/pc/static/picture/86091533544014.jpg">
-            </el-col>
-            <el-col :span="11" :offset="1">
-              <img src="https://cdn.gootoai.com/skin/pc/static/picture/36101516960903.jpg">
             </el-col>
             <el-col :span="11">
               <img src="https://cdn.gootoai.com/skin/pc/static/picture/26351533612380.png">
+            </el-col>
+            <el-col :span="11" :offset="1">
+              <img src="https://cdn.gootoai.com/skin/pc/static/picture/52711533544787.jpg">
+            </el-col>
+            <el-col :span="11">
+              <img src="https://cdn.gootoai.com/skin/pc/static/picture/36101516960903.jpg">
             </el-col>
           </el-col>
         </el-row>
@@ -307,21 +315,24 @@
               <span>苏州</span>
             </el-row>
             <el-row style="padding: 5px;">
-              <el-col :span="6" v-for="(i, index) in 8" :key="i">
+              <el-col :span="6" v-for="(item, i) in hotel_array" :key="i">
                 <el-card :body-style="{ padding: '0px' }" shadow="hover" class="hotel_card">
-                  <img src="https://cdn.gootoai.com/files/5uimg/gonglue/hunan/190918/12-1Z91QJ33N39.jpg?imageView2/1/w/237/h/136/q/85">
+                  <el-image
+                    style="width: 100%; height: 115px"
+                    :src=item.hotel_img
+                    fit="fill"></el-image>
                   <div style="background: #dddddda8;">
-                    <span class="hotel_card_title">全季上海延安路酒店</span>
+                    <span class="hotel_card_title">{{ item.hotel_name }}</span>
                     <el-row style="margin: 5px;">
                       <el-col :span="14" :offset="5">
                         <span class="hotel_card_comment">
                           <svg t="1601019613389" class="icon hotel_card_icon" viewBox="0 0 1031 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3172" width="200" height="200"><path d="M890.092 0H133.908C55.138 0 0 63.015 0 133.908v527.754c0 70.892 63.015 133.907 133.908 133.907H535.63l204.8 212.677c7.877 7.877 15.754 15.754 31.507 15.754 7.877 0 23.631-7.877 31.508-15.754 15.754-15.754 15.754-47.261 0-63.015L590.77 732.554c-15.754-15.754-31.507-23.63-47.261-23.63h-409.6c-23.631 0-47.262-15.755-47.262-39.386v-535.63c0-23.631 15.754-47.262 47.262-47.262h764.061c23.631 0 47.262 23.63 47.262 47.262v527.754c0 23.63-15.754 47.261-47.262 47.261h-102.4c-23.63 0-47.261 23.63-47.261 47.262s15.754 47.261 47.261 47.261h102.4c70.893 0 133.908-63.015 133.908-133.908v-535.63C1024 63.015 960.985 0 890.092 0z" fill="#1296db" p-id="3173"></path></svg>
-                          评论数：99条
+                          评论数：{{ item.hotel_comment }}条
                         </span>
                       </el-col>
                     </el-row>
                     <el-col :span="16">
-                      <span class="hotel_card_price">￥ 126/人起</span>
+                      <span class="hotel_card_price">￥ {{ item.hotel_price }}/人起</span>
                     </el-col>
                   </div>
                 </el-card>
@@ -369,10 +380,15 @@
       <div class="scroll_text" style="height: 110vh;background: #3c3c3c;">
         <div class="mod-home-iconNav">
           <ul class="mod-home-iconNav-ul">
-            <li class="active" style=""><a href="#1">1</a></li>
-            <li class="" style=""><a href="#2">2</a></li>
-            <li class="" style=""><a href="#3">3</a></li>
-            <li class="" style=""><a href="">4</a></li>
+            <li class="active" style=""><a href="#1">
+              <svg t="1602068951653" class="icon icon_active" viewBox="0 0 1089 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4025" width="200" height="200"><path d="M847.954597 0.001976c13.542764-0.125049 21.583389 5.702216 24.384478 16.13127 0.90035 3.376312 0.587728 7.853052 0.587728 11.979656v20.983156c0 26.91046 4.276662 47.380917-20.007777 51.269929a20.795583 20.795583 0 0 1-12.50486-2.500972 21.108205 21.108205 0 0 1-11.079307-12.955036c-1.137942-3.751458-0.750292-9.128548-0.750291-13.8929V45.532173c0-9.766296-1.475574-25.009721 1.475573-32.212521a22.358691 22.358691 0 0 1 12.867502-12.129714l5.001944-1.175457z m-2.375924 353.762506c29.949141-0.312622 24.547041 26.622848 24.547042 55.271484 0 11.929637 1.563108 27.423159-3.101206 34.888561-3.838992 6.114877-9.678762 9.241092-18.632242 10.34152-4.47674 0.550214-9.016004-1.525593-11.667035-3.101206a21.408321 21.408321 0 0 1-9.466179-10.34152c-1.82571-4.45173-1.475574-11.129326-1.475574-17.44428v-24.884673c0-9.378645-1.438059-24.009332 1.325515-31.037064a22.083584 22.083584 0 0 1 12.717443-12.442336z m111.043162-42.516526a23.571662 23.571662 0 0 1 15.818649 5.314566l31.337181 30.149219c5.001944 4.076585 13.642803 11.70455 16.844047 17.294222 5.689712 10.003888 0.212583 21.833487-6.502528 26.597838-6.465013 4.601789-18.044514 5.339575-25.272323 0.90035-4.176623-2.576001-6.927693-6.752625-10.641636-9.753791L951.619891 356.377998c-5.152003-4.164119-11.729559-9.541209-14.480628-15.968707-5.139498-11.942142 2.788584-23.484128 10.941753-27.048014 2.576001-1.125437 5.589673-0.912855 8.565829-2.063302z m-218.634982-1.875729c14.693211-0.137553 28.2985 13.43022 21.570884 29.111315-2.751069 6.440003-9.328626 11.804588-14.480628 15.968707l-26.160169 25.009721c-4.351691 3.513866-7.502916 8.440781-12.704938 11.091812-7.502916 3.751458-17.994494 2.21336-23.759235-1.913244a21.258263 21.258263 0 0 1-4.576779-29.273879l8.865946-8.578334 9.753791-9.316121 22.92141-21.871001c2.763574-2.225865 4.814371-5.189517 7.978101-7.090256a24.434498 24.434498 0 0 1 7.090256-2.651031z m264.415277-102.139701h47.155829c14.880784 0 23.984323-0.725282 31.487239 6.802644 3.864002 3.901517 7.815538 11.566996 5.314566 19.807699s-8.940975 13.755347-18.182067 15.518532l-16.406377 0.150058h-27.510694c-11.366918 0-25.009721 1.250486-32.062462-3.11371-9.228587-5.589673-14.33057-19.382534-6.364974-30.286772a22.43372 22.43372 0 0 1 11.091811-7.840548l5.464624-1.037903z m-370.844146-2.651031h47.293383c14.718221 0 22.346186-1.062913 30.749452 5.614682a20.307894 20.307894 0 0 1 6.502528 21.133215c-2.425943 8.003111-8.753402 13.442725-17.444281 15.23092-5.089478 1.037903-11.829598 0.287612-17.431775 0.287612h-27.335626c-12.304783 0-25.672479 1.037903-32.962812-3.838992-8.615849-5.764741-12.792472-19.332514-5.327071-29.561491a22.508749 22.508749 0 0 1 10.941753-7.840547l5.001944-1.025399z m211.332144 609.249313h53.508299c10.191461 0 21.733448-0.850331 30.43683 1.025399 22.146108 4.776857 40.015554 14.630687 51.732609 29.861607a66.150713 66.150713 0 0 1 10.003888 18.169562c6.25243 17.606844 0.600233 35.776406-7.102761 47.305888-12.167229 18.244592-31.399705 29.786578-57.047174 34.588444-8.665868 1.625632-19.657641 0.712777-29.411432 0.737787 9.766296 28.348519-7.502916 56.271873-22.621293 67.838869-4.551769 3.501361-9.078529 7.115266-15.518532 8.753402-3.301283 0.825321-7.865557 0.43767-11.817093 0.43767H322.95053c-21.258263 0-44.142158 1.137942-61.786517-2.813593-26.822926-5.977323-49.169112-17.706883-59.110476-40.490739-4.601789-10.516588-7.140275-25.584945-3.101205-39.015165a72.015492 72.015492 0 0 1 7.828043-17.594339c10.991772-17.506805 28.548597-28.873723 50.544646-35.476289 5.727226-1.713166 11.917132-2.163341 18.332126-3.251264l15.218415-0.450175h26.160169c2.350914 0 13.755347 0.575224 14.780745-0.287612l0.737787-5.164507 2.225865-9.316122a92.43593 92.43593 0 0 1 14.193017-27.935858 78.943185 78.943185 0 0 1 44.342235-30.011666c9.803811-2.500972 23.521643-1.613127 35.613843-1.613127h62.661857c0.275107-10.441559 6.452508-20.733059 11.079306-27.198071 8.503305-11.867113 20.783078-20.382923 36.964368-24.547042 7.765518-1.988273 17.506805-1.763185 27.34813-1.763185H715.278026L455.176926 266.968245h-0.150059L163.025868 786.432658l-67.101082 119.421419c-6.915188 11.754569-10.429054 25.872557-26.160169 28.973762a22.671312 22.671312 0 0 1-11.529481-1.037903c-8.4908-3.326293-17.194183-13.155113-13.155114-25.860052 1.625632-5.152003 5.076973-9.766296 7.677985-14.193017l11.254374-20.395427 95.161989-169.190764-71.090132-0.737787c-11.504472-0.712777-23.984323 1.025399-33.988211-1.250486-15.681095-3.438837-29.5865-10.354025-38.139825-20.983156a79.005709 79.005709 0 0 1-12.854997-21.370807c-4.601789-11.792084-3.751458-30.349297 0.587729-41.528642C12.304783 596.446311 28.848713 582.603431 53.770901 577.038768c10.516588-2.325904 25.009721-1.050408 37.101921-1.025399v-0.150058c-6.440003-18.594728 1.813205-39.865496 9.603733-50.844763 8.903461-12.504861 21.570885-21.758457 38.577495-26.160169 13.167618-3.413827 32.162501-1.925749 48.181228-1.925748h88.396859L405.157483 266.655623l22.171118-39.46534c3.751458-6.452508 6.677596-14.605677 11.67954-20.007777 3.55138-3.751458 10.466568-8.428276 18.757291-7.090256 15.305949 2.500972 17.781912 13.117599 24.23442 24.246925l32.812754 61.623953 143.655838 269.804872 1.187962-1.050408 59.860768-69.014326c5.35208-6.702605 12.304783-16.556435 26.01011-14.042958 11.354413 2.075807 15.193406 9.766296 20.695544 17.581834L784.054759 514.814582l96.662573 138.191214 30.149218-29.699044c5.964819-5.964819 10.504083-12.192239 20.845603-13.8929 19.069912-3.13872 27.923354 21.358302 34.588444 32.074967l70.352346 116.295204 46.267984 76.704815c5.302061 8.678373 5.527148 21.258263-2.363418 27.648246a28.761179 28.761179 0 0 1-7.240315 4.576779c-6.002333 2.413438-14.84327 1.513088-19.65764-1.325515-6.465013-3.751458-9.41616-10.466568-13.292667-16.856552l-11.254375-18.619737-99.276088-164.488937-3.838992 3.851498-8.753403 8.565829-14.042958 13.755347c-7.015227 7.015227-11.879618 14.218026-24.221915 16.10626-5.614682 0.862835-11.254375-1.838215-14.343075-3.98905-4.464235-3.13872-7.052741-8.10315-10.203966-12.567385l-16.844048-24.084362-97.375349-139.091564-59.873273 68.876772 84.407809 158.81173c9.478684-0.112544 19.882728-0.612738 27.635742 1.325515 26.710382 6.652586 48.631403 25.709993 50.544647 56.90962z m-289.362474-15.968707l-5.477129 1.250486a20.007777 20.007777 0 0 0-12.11721 12.504861c-1.975768 6.452508 0.912855 11.967152 1.77569 17.894455 1.475574 10.078918-8.328237 18.669757-15.218415 20.833098-7.440392 2.325904-20.883117 1.037903-30.161724 1.037903h-61.473894c-15.756124 0-27.710771-1.513088-37.101922 5.164508-8.4908 6.039848-14.755735 15.881173-17.44428 27.648247-1.550603 6.802644 0.425165 13.392706 1.325515 19.207465 1.700661 10.866724-8.415771 19.345019-15.818649 21.58339-3.188739 0.962874-7.502916 0.737787-11.667035 0.737787h-53.35824c-8.865946 0-17.819426-0.300117-25.009721 1.488078a52.07024 52.07024 0 0 0-18.757291 8.56583c-5.914799 4.351691-16.506416 16.381367-10.341519 27.198071 8.903461 15.631076 33.463007 17.294222 58.085077 17.294223H845.328576c2.113321-2.776079 4.714332-5.001944 6.25243-8.440781l1.625632-5.752236c1.813205-9.678762-3.651419-17.669368-8.565829-21.433331-3.751458-2.876118-7.778023-4.676818-10.491578-8.578335-6.25243-8.853441-3.463846-21.820982 3.751458-27.510693 8.328237-6.577557 20.520476-5.314566 35.326231-5.314566h30.449336c5.514644 0 11.729559 0.475185 16.406377-0.600233a45.017498 45.017498 0 0 0 16.256318-7.240314c4.06408-2.888623 12.317288-9.44117 10.941753-17.294223-1.150447-6.527537-6.089867-10.816704-10.654141-14.042958a45.505188 45.505188 0 0 0-18.757291-7.840548l-26.260207-0.137553h-53.7709c-7.903072 0-18.894844 1.162952-25.860052-0.43767-9.341131-2.163341-15.731115-8.390761-17.444281-18.182067-1.250486-7.402877 2.913633-11.516977 4.139109-16.856553 2.500972-10.891734-5.214527-18.757291-12.11721-21.420826-5.764741-2.26338-15.606066-1.33802-23.346574-1.33802H553.527654zM153.809785 539.19906l-4.42672 0.750291a23.484128 23.484128 0 0 0-9.616238 5.464624 22.958924 22.958924 0 0 0-5.001944 6.952703c-3.964041 9.216082 0.087534 19.745175 5.76474 24.23442 4.226643 3.338798 8.678373 5.327071 11.529482 10.003888 5.477129 9.066024 2.000778 21.108205-4.576779 26.260207-7.190295 5.689712-15.330959 5.327071-28.235975 5.327071h-38.765068c-6.164896 0-13.955424-0.887845-19.357524 0.450175a24.246925 24.246925 0 0 0-9.453675 4.876896c-5.001944 3.901517-9.90385 12.329793-7.102761 21.570884 2.67604 8.753402 9.728782 14.218026 19.657641 15.818649l23.759235 0.150058 94.886882 0.887845 68.876772-122.835245zM843.802983 122.98728c52.758007-0.825321 89.884938 27.035509 105.541023 62.961973 10.979268 25.184789 11.767074 55.484066 0.600234 81.281594-12.392317 28.611121-36.401649 49.431714-67.701315 59.122981-7.828043 2.425943-16.081251 3.188739-25.284829 4.589283h-12.704938l-10.003888-0.750291c-8.303227-1.500583-16.093756-3.076196-23.058963-5.764741-31.337181-12.11721-52.632958-32.200016-64.737664-63.549702-4.764352-12.354802-8.165674-31.587278-5.001944-48.331286a116.445262 116.445262 0 0 1 5.327071-20.695544c11.829598-30.211743 33.925687-50.669695 64.299993-62.374245 6.440003-2.500972 13.580279-3.889012 20.983156-5.32707z m1.250486 42.266429l-6.652586 0.737786a74.47895 74.47895 0 0 0-11.967151 3.113711c-18.019504 7.027732-31.049569 19.295-38.139825 37.239474a70.990094 70.990094 0 0 0-3.101206 12.417327c-1.8007 9.39115 0.237592 20.345408 2.663536 27.198072 6.827654 19.307505 19.882728 31.549763 38.765068 38.877611 6.577557 2.65103 18.707271 5.552158 28.71116 3.901517 5.502139-0.937865 10.491578-1.563108 15.23092-3.101206a62.949468 62.949468 0 0 0 38.427436-34.413376 72.590716 72.590716 0 0 0 4.289168-14.180512c2.851108-13.392706-1.037903-27.685761-5.464625-36.364134-11.004277-21.53337-30.111704-35.563824-62.824419-35.47629z m156.08567-104.040441c15.318454-0.200078 28.923743 12.917521 22.321176 28.973762-2.626021 6.339964-10.829209 13.280162-15.968707 17.431776l-26.897955 25.709993c-3.388817 2.738564-5.83977 6.25243-9.753791 8.578335-6.71511 3.939031-17.681873 3.063691-23.646692-0.887845-8.378257-5.539653-13.242647-18.882339-5.914799-29.261374a55.884222 55.884222 0 0 1 10.34152-10.203966l10.203966-9.753792L982.006702 72.405119c3.001167-2.425943 5.214527-5.739731 8.578335-7.840548a26.147663 26.147663 0 0 1 6.640081-2.813594l3.851497-0.587728z m-305.281162-1.925748c6.790139-0.100039 11.479462 1.375535 15.380979 4.139109l39.452835 37.739669c3.501361 2.826098 7.402877 6.25243 9.753791 10.191461 5.83977 9.691267 1.250486 21.871001-5.614682 26.897955-6.364974 4.689323-17.819426 5.989828-25.422382 1.488079-4.339187-2.576001-7.127771-6.827654-10.941753-9.90385l-26.597838-25.484906c-4.601789-3.751458-11.917132-9.916354-14.33057-15.506027-5.001944-11.416938 1.250486-22.108594 8.853441-26.610343 2.838603-1.675651 6.002333-1.575612 9.466179-2.951147z" p-id="4026"></path></svg>
+            </a></li>
+            <li class="" style=""><a href="#2">
+              <svg t="1602069010874" class="icon icon_active" viewBox="0 0 1241 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6202" width="200" height="200"><path d="M254.758788 505.173333m-147.704243 0a147.704242 147.704242 0 1 0 295.408485 0 147.704242 147.704242 0 1 0-295.408485 0Z" fill="#FFFFFF" p-id="6203"></path><path d="M254.758788 672.73697a167.873939 167.873939 0 1 1 0-335.747879 167.873939 167.873939 0 0 1 0 335.747879z m0-295.098182a127.534545 127.534545 0 1 0 0 255.069091 127.534545 127.534545 0 0 0 0-255.069091z" fill="#2D2D2D" p-id="6204"></path><path d="M475.694545 884.673939a220.935758 220.935758 0 0 0-441.871515 0 69.507879 69.507879 0 0 0 69.818182 69.507879h372.363636l-0.310303-69.507879z" fill="#DADBDB" p-id="6205"></path><path d="M475.694545 974.351515h-372.363636a89.987879 89.987879 0 0 1-89.987879-89.677576 241.105455 241.105455 0 0 1 482.210909 0v69.507879a20.169697 20.169697 0 0 1-19.859394 20.169697zM254.758788 682.666667a200.766061 200.766061 0 0 0-200.766061 200.76606 49.648485 49.648485 0 0 0 49.648485 49.338182h351.883636v-48.09697A200.766061 200.766061 0 0 0 254.758788 682.666667z" fill="#2D2D2D" p-id="6206"></path><path d="M482.210909 401.221818m-197.973333 0a197.973333 197.973333 0 1 0 395.946666 0 197.973333 197.973333 0 1 0-395.946666 0Z" fill="#FFFFFF" p-id="6207"></path><path d="M482.210909 620.606061a217.212121 217.212121 0 1 1 0-434.424243 217.212121 217.212121 0 0 1 0 434.424243z m0-395.636364a177.803636 177.803636 0 1 0 177.803636 177.493333 177.803636 177.803636 0 0 0-177.803636-178.734545v1.241212z" fill="#2D2D2D" p-id="6208"></path><path d="M778.24 910.118788a296.029091 296.029091 0 0 0-592.058182 0 93.090909 93.090909 0 0 0 93.090909 93.090909h405.255758a93.090909 93.090909 0 0 0 93.090909-93.090909h0.620606z" fill="#FFFFFF" p-id="6209"></path><path d="M684.528485 1024H279.272727a113.570909 113.570909 0 0 1-113.570909-113.570909c0-174.638545 141.560242-316.198788 316.198788-316.198788 174.638545 0 316.198788 141.560242 316.198788 316.198788A113.881212 113.881212 0 0 1 684.528485 1024z m-202.317576-389.740606a276.169697 276.169697 0 0 0-275.859394 275.859394A73.231515 73.231515 0 0 0 279.272727 983.350303h405.255758a73.541818 73.541818 0 0 0 73.541818-73.231515 276.169697 276.169697 0 0 0-275.859394-275.859394z" fill="#2D2D2D" p-id="6210"></path><path d="M1210.181818 99.917576l-11.170909 324.576969-122.259394 12.722425-111.398788-53.372122-152.979394-20.169696-31.961212 14.894545 4.03394-306.889697 67.025454-20.48 92.16 9.929697 47.786667 23.58303 53.992727 25.755152 54.613333-0.620606 59.578182-5.275152z" fill="#FFCB55" p-id="6211"></path><path d="M1210.181818 431.010909a20.169697 20.169697 0 0 1-19.549091-20.790303c0-4.033939 9.929697-328.300606 9.929697-328.300606h40.339394s-9.929697 327.059394-9.929697 328.610909a19.859394 19.859394 0 0 1-20.790303 20.48z" fill="#2D2D2D" p-id="6212"></path><path d="M1128.882424 136.533333A142.429091 142.429091 0 0 1 1086.060606 130.327273a445.284848 445.284848 0 0 1-68.266667-28.547879 389.740606 389.740606 0 0 0-64.853333-27.306667 273.37697 273.37697 0 0 0-98.676364-12.412121 240.174545 240.174545 0 0 0-62.060606 15.515152 19.238788 19.238788 0 0 1-19.238788 12.722424 20.169697 20.169697 0 0 1-19.54909-20.790303c0-35.684848 75.093333-45.304242 98.055757-47.476364a306.579394 306.579394 0 0 1 113.881212 13.032727c24.731152 8.316121 48.717576 18.680242 71.68 31.030303 19.952485 10.426182 40.711758 19.238788 62.060606 26.375758a116.053333 116.053333 0 0 0 107.985455-24.513939 20.169697 20.169697 0 0 1 28.547879 1.861818 20.48 20.48 0 0 1-1.861819 28.547879 158.254545 158.254545 0 0 1-104.882424 38.167272zM1119.26303 470.419394a155.151515 155.151515 0 0 1-42.821818-6.206061A460.8 460.8 0 0 1 1008.484848 434.424242a403.393939 403.393939 0 0 0-65.163636-27.306666 265.309091 265.309091 0 0 0-98.986667-11.481212 231.486061 231.486061 0 0 0-62.060606 15.204848 19.238788 19.238788 0 0 1-19.238787 12.722424 20.169697 20.169697 0 0 1-19.549091-20.790303c0-35.995152 75.403636-45.304242 98.055757-47.476363a312.475152 312.475152 0 0 1 113.881212 13.032727c24.731152 8.316121 48.717576 18.680242 71.68 31.030303 19.890424 10.550303 40.649697 19.393939 62.060606 26.375758a114.191515 114.191515 0 0 0 107.985455-24.51394 20.48 20.48 0 1 1 26.686061 31.030303 157.633939 157.633939 0 0 1-104.572122 38.167273z" fill="#2D2D2D" p-id="6213"></path><path d="M771.723636 785.066667h-40.339394s20.790303-710.283636 21.100606-713.69697a19.859394 19.859394 0 0 1 20.169697-19.549091 20.169697 20.169697 0 0 1 19.859394 20.169697l-20.790303 713.076364z" fill="#2D2D2D" p-id="6214"></path></svg>
+            </a></li>
+            <li class="" style=""><a href="#3">
+              <svg t="1602069056269" class="icon icon_active" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7060" width="200" height="200"><path d="M 896 896 h 42.6667 v 42.6667 H 85.3333 v -42.6667 h 42.6667 V 170.731 A 42.6667 42.6667 0 0 1 170.603 128 h 469.461 C 663.595 128 682.667 147.243 682.667 170.731 V 896 h 170.667 V 426.667 h -128 v -42.6667 h 149.333 a 21.3333 21.3333 0 0 1 21.3333 21.3333 v 490.667 Z m -256 0 V 170.731 L 170.603 170.667 L 170.667 896 h 469.333 Z M 277.333 298.667 h 256 v 42.6667 H 277.333 v -42.6667 Z m 0 256 h 256 v 42.6667 H 277.333 v -42.6667 Z m 0 -128 h 256 v 42.6667 H 277.333 v -42.6667 Z m 0 256 h 256 v 42.6667 H 277.333 v -42.6667 Z" fill="#333333" p-id="7061"></path></svg>
+            </a></li>
           </ul>
         </div>
         <el-row class="home_bottom">
@@ -509,6 +525,8 @@ export default {
   name: 'Index',
   data () {
     return {
+      // 当前用户
+      nowUser: false,
       // 二维码
       show2: false,
       Y1: 0, // 背景1Y轴偏移量
@@ -528,26 +546,86 @@ export default {
       // 汉堡按钮开关
       hamburger_btn : true,
       // 选项卡
-      activeName: 'second',
+      activeName: 'first',
       // 博客卡片
       currentDate: new Date(),
-      // 手风琴效果
-      tableData: [{
+      // 景点推荐数据
+      firstScenic: {
+        scenic_name: 'A11: 2日激情浪漫游 (大峡谷玻璃桥+凤凰古城)',
+        scenic_price: '88.00',
+        scenic_img_url: 'https://imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg'
+      },
+      secondScenic: {
+        scenic_name: 'A11: 2日激情浪漫游 (大峡谷玻璃桥+凤凰古城)',
+        scenic_price: '88.00',
+        scenic_img_url: 'https://imgs.qunarzz.com/p/p19/1809/b9/2a3d362aabcbb02.jpg_256x160_28907832.jpg'
+      },
+      thirdScenic: {
+        scenic_add: '北京',
+        scenic_price: '88.00',
+        scenic_img_url: 'https://img1.qunarzz.com/sight/p0/2005/39/3979f1867defec4ea3.water.jpg_256x160_6ae804bb.jpg'
+      },
+      forthScenic: {
+        scenic_add: '上海',
+        scenic_price: '88.00',
+        scenic_img_url: 'https://img1.qunarzz.com/sight/p0/1603/85/85c883189bf7293390.water.jpg_256x160_585de5b5.jpg'
+      },
+      // 活动展示
+      activity_array: [
+        {activity_time: '2020/10/1-2020/10/8',activity_details: '国庆中秋小长假进入倒计时，各类促文旅消费新举措纷至沓来，地方频频施展“抢客”大招，线上旅游企业大力促销蓄势待发。',activity_background: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600978669294&di=22984319db252bf7eb51388398285517&imgtype=0&src=http%3A%2F%2Fpic321.nipic.com%2Ffile%2F20200901%2F12086568_091856838083_2.jpg'},
+        {activity_time: '2020/10/1-2020/10/8',activity_details: '国庆中秋小长假进入倒计时，各类促文旅消费新举措纷至沓来，地方频频施展“抢客”大招，线上旅游企业大力促销蓄势待发。',activity_background: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600978669294&di=22984319db252bf7eb51388398285517&imgtype=0&src=http%3A%2F%2Fpic321.nipic.com%2Ffile%2F20200901%2F12086568_091856838083_2.jpg'},
+        {activity_time: '2020/10/1-2020/10/8',activity_details: '国庆中秋小长假进入倒计时，各类促文旅消费新举措纷至沓来，地方频频施展“抢客”大招，线上旅游企业大力促销蓄势待发。',activity_background: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600978669294&di=22984319db252bf7eb51388398285517&imgtype=0&src=http%3A%2F%2Fpic321.nipic.com%2Ffile%2F20200901%2F12086568_091856838083_2.jpg'},
+      ],
+      // 博客推荐
+      blog_array: [
+        {blog_name: '张家界冬季自驾游、自助游攻略',blog_read_num: '99',blog_time: '2020/9/25',blog_img: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/52a5a0f4a4cef3b92ea9dc73288dcc0e.jpg'},
+        {blog_name: '云南的诗和远方在不一定在大理丽江 建水蒙自沙溪一样可以很文艺',blog_read_num: '239',blog_time: '2018/11/01',blog_img: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/52a5a0f4a4cef3b92ea9dc73288dcc0e.jpg'},
+        {blog_name: '张家界冬季自驾游、自助游攻略',blog_read_num: '99',blog_time: '2020/9/25',blog_img: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/52a5a0f4a4cef3b92ea9dc73288dcc0e.jpg'},
+        {blog_name: '张家界冬季自驾游、自助游攻略',blog_read_num: '99',blog_time: '2020/9/25',blog_img: 'https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/52a5a0f4a4cef3b92ea9dc73288dcc0e.jpg'},
+      ],
+      // 旅游团推荐/手风琴效果
+      tour_group_array: [{
         open: true,
-        image_url: 'http://47.105.158.199/3124/12-1Z113150930195.jpg'
+        tour_group_add: '西藏·拉萨',
+        tour_group_price: '2000.00',
+        tour_group_details: '【尊享西藏】西藏七日游线路：拉萨+布达拉宫+八角街+巴松措+鲁朗林海+苯日神山+卡定沟+羊卓雍措',
+        tour_group_image_url: 'http://47.105.158.199/3124/12-1Z113150930195.jpg'
       }, {
         open: false,
-        image_url: 'http://47.105.158.199/3124/12-200G1164409322.jpg'
+        tour_group_add: '西藏·拉萨',
+        tour_group_price: '2000.00',
+        tour_group_details: '【尊享西藏】西藏七日游线路：拉萨+布达拉宫+八角街+巴松措+鲁朗林海+苯日神山+卡定沟+羊卓雍措',
+        tour_group_image_url: 'http://47.105.158.199/3124/12-1Z113150930195.jpg'
       }, {
         open: false,
-        image_url: 'http://47.105.158.199/3124/12-20062913542C94.jpg'
+        tour_group_add: '西藏·拉萨',
+        tour_group_price: '2000.00',
+        tour_group_details: '【尊享西藏】西藏七日游线路：拉萨+布达拉宫+八角街+巴松措+鲁朗林海+苯日神山+卡定沟+羊卓雍措',
+        tour_group_image_url: 'http://47.105.158.199/3124/12-1Z113150930195.jpg'
       }, {
         open: false,
-        image_url: 'http://47.105.158.199/3124/12-200619160014B6.jpg'
+        tour_group_add: '西藏·拉萨',
+        tour_group_price: '2000.00',
+        tour_group_details: '【尊享西藏】西藏七日游线路：拉萨+布达拉宫+八角街+巴松措+鲁朗林海+苯日神山+卡定沟+羊卓雍措',
+        tour_group_image_url: 'http://47.105.158.199/3124/12-1Z113150930195.jpg'
       }, {
         open: false,
-        image_url: 'http://47.105.158.199/3124/12-2006291550342Z.jpg'
+        tour_group_add: '西藏·拉萨',
+        tour_group_price: '2000.00',
+        tour_group_details: '【尊享西藏】西藏七日游线路：拉萨+布达拉宫+八角街+巴松措+鲁朗林海+苯日神山+卡定沟+羊卓雍措',
+        tour_group_image_url: 'http://47.105.158.199/3124/12-1Z113150930195.jpg'
       }],
+      // 酒店推荐
+      hotel_array: [
+        {hotel_name: '全季上海延安路酒店',hotel_img: 'https://userimg.qunarzz.com/imgs/202005/11/C.HQaS1aY_u4tiXIOvv480.jpg',hotel_comment: '205',hotel_price: '168.00'},
+        {hotel_name: '全季上海延安路酒店',hotel_img: 'https://userimg.qunarzz.com/imgs/202005/11/C.HQaS1aY_u4tiXIOvv480.jpg',hotel_comment: '205',hotel_price: '168.00'},
+        {hotel_name: '全季上海延安路酒店',hotel_img: 'https://userimg.qunarzz.com/imgs/202005/11/C.HQaS1aY_u4tiXIOvv480.jpg',hotel_comment: '205',hotel_price: '168.00'},
+        {hotel_name: '全季上海延安路酒店',hotel_img: 'https://userimg.qunarzz.com/imgs/202005/11/C.HQaS1aY_u4tiXIOvv480.jpg',hotel_comment: '205',hotel_price: '168.00'},
+        {hotel_name: '全季上海延安路酒店',hotel_img: 'https://userimg.qunarzz.com/imgs/202005/11/C.HQaS1aY_u4tiXIOvv480.jpg',hotel_comment: '205',hotel_price: '168.00'},
+        {hotel_name: '全季上海延安路酒店',hotel_img: 'https://userimg.qunarzz.com/imgs/202005/11/C.HQaS1aY_u4tiXIOvv480.jpg',hotel_comment: '205',hotel_price: '168.00'},
+        {hotel_name: '全季上海延安路酒店',hotel_img: 'https://userimg.qunarzz.com/imgs/202005/11/C.HQaS1aY_u4tiXIOvv480.jpg',hotel_comment: '205',hotel_price: '168.00'},
+        {hotel_name: '全季上海延安路酒店',hotel_img: 'https://userimg.qunarzz.com/imgs/202005/11/C.HQaS1aY_u4tiXIOvv480.jpg',hotel_comment: '205',hotel_price: '168.00'},
+      ],
       // 页底
       tableNews: [{
         new_x: '70',
@@ -595,7 +673,21 @@ export default {
 
     // this.searchBox=this.$refs.search_box.offsetWidth
   },
+  mounted:function(){
+    // 进入页面即需要触发的函数
+    this.getNowUser();
+  },
   methods: {
+    getNowUser: function (){
+      var that = this;
+      this.$axios.post('/index/index/getNowUsser').then(response => {
+        if(response.data.code=='10311'){
+          that.nowUser=true;
+        }else{
+          that.nowUser=false;
+        }
+      })
+    },
     /**
      * 背景视差偏移计算
      * */
@@ -617,13 +709,13 @@ export default {
     },
     //  鼠标移入移出
     enter: function (open_i) {
-      for(var i=0;i<this.tableData.length;i++){
-        this.tableData[i].open = false
+      for(var i=0;i<this.tour_group_array.length;i++){
+        this.tour_group_array[i].open = false
       }
-      this.tableData[open_i].open = true
+      this.tour_group_array[open_i].open = true
     }
   },
-  components: {}
+  components: {},
 }
 </script>
 
@@ -1048,8 +1140,14 @@ export default {
     background-color: #ddd;
   }
   .recommend_blog_title{
+    width: 90%;
+    margin: 0 auto;
     color: #B3C0D1;
     font-size: 90%;
+    display: inherit;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .recommend_blog_read{
     color: #ff8a00;
@@ -1345,19 +1443,23 @@ export default {
     position: fixed;
     top: 25%;
     right: 10px;
-    border: 1px solid black;
   }
   .mod-home-iconNav-ul{
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
-    list-style: none ;
-    font-size: 14px ;
+    list-style: none;
+    font-size: 14px;
     float: left;
+    padding-top: 50px;
   }
   .mod-home-iconNav-ul li{
     height: 20%;
     line-height: 20%;
+  }
+  .icon_active{
+    width: 20px;
+    height: 20px;
   }
 </style>

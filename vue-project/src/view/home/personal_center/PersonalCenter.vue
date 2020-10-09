@@ -1,21 +1,37 @@
 <template>
-  <div>
   <el-container>
-    <public_back_top/>
-    <el-header style="height: 40px;line-height: 40px">
-      <public_head_nav/></el-header>
-    <el-header class="centerHead" style="height: 80px;line-height: 80px">
-      <public_search/></el-header>
-    <el-container class="content">
+    <el-header style="height: 40px;line-height: 40px;background: #f8f8f8;">
+      <public_head_nav/>
+    </el-header>
+    <el-header class="personal_head" height="61px">
+      <el-row>
+        <el-col :span="24">
+          <el-col :span="4" style="position: relative;">
+            <img class="logo" src="http://47.105.158.199/3124/16pic_5211757_s.png">
+          </el-col>
+          <el-col :span="20">
+            <el-menu :default-active="activeIndex" mode="horizontal">
+              <el-menu-item index="1">首页</el-menu-item>
+              <el-menu-item index="2">个人中心</el-menu-item>
+              <el-menu-item index="3">景点索引</el-menu-item>
+              <el-menu-item index="4">服务中心</el-menu-item>
+            </el-menu>
+          </el-col>
+        </el-col>
+      </el-row>
+    </el-header>
+    <el-container style="padding: 80px;padding-top: 20px;">
       <el-aside width="300px">
-        <PersonalCenterAside/></el-aside>
-      <el-main>
-        <router-view/></el-main>
-
+        <PersonalCenterAside/>
+      </el-aside>
+      <el-main class="personal_main">
+        <router-view/>
+      </el-main>
     </el-container>
+    <el-footer style="padding: 0;">
+      <public_foot></public_foot>
+    </el-footer>
   </el-container>
-<public_foot></public_foot>
-  </div>
 </template>
 
 
@@ -25,61 +41,39 @@
   import public_search from "../public/public_search";
   import public_back_top from "../public/public_back_top";
   import public_foot from "../public/public_foot";
-    export default {
-        name: "PersonalCenter",
-      components:{
-          public_head_nav,
-          PersonalCenterAside,
-        public_search,
-        public_back_top,
-        public_foot
+  export default {
+    name: "PersonalCenter",
+    data() {
+      return {
+        activeIndex: '1',
+      };
+    },
+    components:{
+      public_head_nav,
+      PersonalCenterAside,
+      public_search,
+      public_back_top,
+      public_foot
 
-      }
     }
+  }
 </script>
 
 <style scoped>
-
-  .el-header, .el-footer {
-    padding: 0;
-    /*background-color: #B3C0D1;*/
-    color: #333;
-    text-align: center;
-    line-height: 60px;
+  .logo{
+    margin: -45px;
+    height: 140px;
+    filter: drop-shadow(3px 0px 1px #fff);
   }
-  .el-aside {
-    /*background-color: #D3DCE6;*/
-    color: #333;
-    text-align: center;
-    line-height: 200px;
-    margin-top: 20px;
-    margin-right: 30px;
+  .personal_head{
+    border-bottom: 1px solid #e6e6e6;
   }
-  .el-main {
-    /*background-color: #E9EEF3;*/
-    color: #333;
-    /*text-align: center;*/
-    padding: 0;
-    /*line-height: 160px;*/
-    margin-top: 20px;
+  .personal_main{
+    margin-left: 30px;
+    border: 1px solid #ddd;
   }
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
+  .personal_main:hover{
+    background-color: #f9f8f8;
+    border: 1px solid #6d97e4bd;
   }
-  .el-container:nth-child(7) .el-aside {
-    line-height: 320px;
-  }
-  .content{
-    padding: 0 50px;
-  }
-  .el-container{
-    width: 1200px;
-    height: 650px;
-    margin: 0 auto;
-    min-width: 1200px;
-
-  }
-
-
 </style>

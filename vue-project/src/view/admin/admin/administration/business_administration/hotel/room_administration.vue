@@ -6,7 +6,7 @@
           <i class="iconfont el-ico-xpersonal"> 后台管理</i>
         </el-breadcrumb-item>
         <el-breadcrumb-item>酒店管理</el-breadcrumb-item>
-        <el-breadcrumb-item>房间发布</el-breadcrumb-item>
+        <el-breadcrumb-item>房间管理</el-breadcrumb-item>
       </el-breadcrumb>
     </el-header>
     <el-main>

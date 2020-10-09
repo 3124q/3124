@@ -15,30 +15,28 @@
         :data="tableData"
         style="width: 100%">
         <el-table-column
-          prop="date"
-          label="日期"
-          sortable
-          width="180"
-          column-key="date"
-          :filters="[{text: '2016-05-01', value: '2016-05-01'}, {text: '2016-05-02', value: '2016-05-02'}, {text: '2016-05-03', value: '2016-05-03'}, {text: '2016-05-04', value: '2016-05-04'}]"
-          :filter-method="filterHandler"
-        >
-        </el-table-column>
-        <el-table-column
           prop="name"
-          label="姓名"
+          label="评论用户"
           width="180">
         </el-table-column>
         <el-table-column
+          prop="date"
+          label="评论时间"
+          sortable
+          width="180"
+          column-key="date"
+        >
+        </el-table-column>
+        <el-table-column
           prop="address"
-          label="地址"
+          label="评论内容"
           :formatter="formatter">
         </el-table-column>
         <el-table-column
           prop="tag"
-          label="标签"
+          label="评分"
           width="100"
-          :filters="[{ text: '家', value: '家' }, { text: '公司', value: '公司' }]"
+          :filters="[{ text: '差评（1星）', value: '差评（1星）' }, { text: '良好(2-4星)', value: '良好(2-4星)' }, { text: '好评(5星)', value: '好评(5星)' }]"
           :filter-method="filterTag"
           filter-placement="bottom-end">
           <template slot-scope="scope">
@@ -50,7 +48,7 @@
         <el-table-column label="操作">
           <template slot-scope="scope">
             <el-button
-              size="mini">编辑</el-button>
+              size="mini">回复</el-button>
             <el-button
               size="mini"
               type="danger">删除</el-button>

@@ -14,7 +14,6 @@
         <img v-bind:src="userimg" alt="">
       </div>
       <el-button type="success" round style="vertical-align: center" @click="dialogVisible = true">修改</el-button>
-
     </div>
     <div class="row">
       <span class="imfo-name">
@@ -33,7 +32,6 @@
         {{fullName}}
       </div>
       <input type="text" v-model="newfullname"v-bind:class="{hide:!ishide}">
-
     </div>
     <div class="row">
       <span class="imfo-name">
@@ -45,7 +43,6 @@
       <router-link to="/changephone" class="changePhone">
           修改手机号>>
       </router-link>
-
     </div>
     <div class="row">
       <span class="imfo-name">
@@ -61,9 +58,7 @@
           type="date"
           placeholder="选择日期"v-bind:class="{hide:!ishide}">
         </el-date-picker>
-
       </div>
-
     </div>
     <div class="row">
       <span class="imfo-name">
@@ -81,7 +76,6 @@
       <span class="imfo-name">
         邮箱:
       </span>
-
       <div class="imfo-content">
         {{userEmail}}
       </div>
@@ -114,7 +108,6 @@
         </div>
         <el-button slot="reference" class="cancel">取消</el-button>
       </el-popover>
-<!--      <button v-bind:class="{ 'cancel':true,'hide':!ishide}" >取消</button>-->
     </div>
     <el-dialog
       title="提示"
@@ -123,11 +116,12 @@
       :before-close="handleClose">
       <el-upload
         class="avatar-uploader"
-        action=""
+        action="https://jsonplaceholder.typicode.com/posts/"
         :show-file-list="true"
-        :on-success="handleAvatarSuccess"
+        :auto-upload=false
+        :on-change="handleAvatarChange"
         :before-upload="beforeAvatarUpload">
-        <img v-if="imageUrl" :src="imageUrl" class="avatar">
+        <img v-if="imageUrl" v-bind:src="imageUrl" class="avatar">
         <i v-else class="el-icon-plus avatar-uploader-icon"></i>
       </el-upload>
       <span slot="footer" class="dialog-footer">
@@ -146,6 +140,7 @@
         data(){
           return{
             imageUrl: '',
+            tempUrl: '',
             dialogVisible: false,
             userimg:"https://img2.woyaogexing.com/2020/09/24/8d134c18c15a413aadaa52963f587ba4!400x400.jpeg",
             newusername:"",
@@ -173,7 +168,7 @@
       created() {
 
           var that=this;
-          this.$axios.post("index/nowuser",{id:that.nowuserID}).then(
+          this.$axios.post("index/personalcenter/nowuser",{id:that.nowuserID}).then(
             res=>{
               console.log(that.userName);
               console.log(res);
@@ -187,8 +182,6 @@
               that.userOffenLive=res.data[0].userAddress;
             }
           )
-
-
       },
       methods:{
         handleClose(done) {
@@ -198,14 +191,38 @@
             })
             .catch(_ => {});
         },
-
-        handleAvatarSuccess(res, file) {
-          this.imageUrl = URL.createObjectURL(file.raw);
+        //将上传图片的原路径赋值给临时路径
+        handleAvatarChange(res, file) {
+          this.imageUrl = file.raw;
+          console.log(file.raw)
         },
-        beforeAvatarUpload(file) {
+        handleAvatarSuccess(res, file) {
+          this.imageUrl = file.raw;
+        },
+        uploadImg(item){
+          let app=this;
+          let myfile=new FormData();
+          myfile.append('file',item.file);
+          app.$Api.fileUpload(myfile,function (result) {
+            if (result.result=="true"){
+              app.$notify.success({
+                title: '温馨提示：',
+                message: result.message,
+              })
+              App.imageUrl = App.tempUrl;
+              //将后台传来的数据库图片路径赋值给car对象的图片路径
+              App.car.carImg = result.imgUrl;
+            } else {
+              App.$notify.error({
+                title: '温馨提示：',
+                message: result.message,
+              });
+            }
+          })
+        },
+        beforeAvatarUpload(res,file) {
           const isJPG = file.type === 'image/jpeg';
           const isLt2M = file.size / 1024 / 1024 < 2;
-
           if (!isJPG) {
             this.$message.error('上传头像图片只能是 JPG 格式!');
           }

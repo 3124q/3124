@@ -102,6 +102,7 @@
     line-height: 70px;
     background-image: url("../../../assets/benner1.jpg");
     background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
   /*下拉菜单*/
   .el-dropdown-link {

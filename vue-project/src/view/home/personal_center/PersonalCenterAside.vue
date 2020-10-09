@@ -6,7 +6,14 @@
           default-active="1"
           class="el-menu-vertical-demo"
           :unique-opened="true"
-          :router=true>
+          :router=true
+          style="border: none;">
+          <el-menu-item index="/home">
+            <template slot="title">
+              <i class="iconfont el-ico-xzhuye icon_home"></i>
+              <span>主页</span>
+            </template>
+          </el-menu-item>
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-user"></i>
@@ -19,8 +26,6 @@
               <el-menu-item index="1-3">安全设置</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-
-
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-bicycle"></i>
@@ -31,10 +36,7 @@
               <el-menu-item index="2-1">我的行程</el-menu-item>
               <el-menu-item index="/mycollect">我的收藏</el-menu-item>
             </el-menu-item-group>
-
           </el-submenu>
-
-
           <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-bank-card"></i>
@@ -44,10 +46,8 @@
               <template slot="title"></template>
               <el-menu-item index="/mywallet">我的钱包</el-menu-item>
               <el-menu-item index="/recharge">充值中心</el-menu-item>
-
             </el-menu-item-group>
           </el-submenu>
-
           <el-submenu index="4">
             <template slot="title">
               <i class="el-icon-notebook-1"></i>
@@ -58,7 +58,6 @@
               <el-menu-item index="4-1">我的博客</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-
           <el-submenu index="5">
             <template slot="title">
               <i class="el-icon-shopping-cart-1"></i>
@@ -69,11 +68,8 @@
               <el-menu-item index="/myhotel">我的酒店</el-menu-item>
               <el-menu-item index="/myticket">我的门票</el-menu-item>
               <el-menu-item index="/mygroup">我的旅行团</el-menu-item>
-
             </el-menu-item-group>
           </el-submenu>
-
-
           <el-submenu index="6">
             <template slot="title">
               <i class="el-icon-notebook-2"></i>
@@ -84,7 +80,6 @@
               <el-menu-item index="/helpercenter/1">用户须知</el-menu-item>
               <el-menu-item index="/helpercenter/2">意见投诉</el-menu-item>
               <el-menu-item index="/helpercenter/3">联系客服</el-menu-item>
-
             </el-menu-item-group>
           </el-submenu>
           <el-menu-item index="/mynews">
@@ -92,28 +87,25 @@
             <span slot="title" style="font-size: 14px">我的消息</span>
           </el-menu-item>
         </el-menu>
-
-
-
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "PersonalCenterAside"
-    }
+  export default {
+    name: "PersonalCenterAside"
+  }
 </script>
 
 <style scoped>
   #PersonalCenterAside{
-
-
-    border: 1px solid #6de4e4bd;
+    border: 1px solid #ddd;
   }
-  .el-menu-item{
-    font-size: 12px;
-
+  #PersonalCenterAside:hover{
+    border: 1px solid #6d97e4bd;
+  }
+  .icon_home{
+    margin-right: 30px;
   }
 </style>

@@ -1,231 +1,189 @@
 <template>
-  <div>
-    <el-row id="enroll_left" hidden-sm-and-down>
-      <div id="left_top">
-        <el-row :gutter="10" id="txt_box">
-          <el-col :xs="8" :sm="2" :md="2" :lg="6" class="hidden-xs-only txt">logo</el-col>
-          <el-col :xs="8" :sm="2" :md="2" :lg="6" class="txt">首页</el-col>
-          <el-col :xs="8" :sm="2" :md="2" :lg="6" class="txt">注册</el-col>
-          <el-col :xs="8" :sm="2" :md="2" :lg="6" class="txt">联系我们</el-col>
-        </el-row>
-      </div>
-      <el-row id="left_txt" class="hidden-xs-only">
-        <el-col class="hidden-xs-only"><h2>登陆或者创建一个新账户</h2></el-col>
+  <el-container>
+    <el-header height="30px" class="login_head">
+      <public_head></public_head>
+    </el-header>
+    <el-main class="login_form">
+      <el-row>
+        <el-col class="login_info">
+          <img class="login_image" src="http://47.105.158.199/3124/840 (1).png">
+        </el-col>
+        <el-col class="login_form_item" :span="8" :offset="15">
+          <el-col :span="22" :offset="1">
+            <h2>账号密码登录</h2>
+            <img class="logo" src="http://47.105.158.199/3124/16pic_5211757_s.png">
+          </el-col>
+          <el-col :span="22" :offset="1" style="margin-top: 20px;">
+            <el-input
+              placeholder="请输入账号/手机号"
+              v-model="loginForm.loginAcc"
+              clearable
+              prefix-icon="iconfont el-ico-xuser">
+            </el-input>
+          </el-col>
+          <el-col :span="22" :offset="1" style="margin-top: 10px;">
+            <el-input
+              placeholder="请输入密码"
+              v-model="loginForm.loginPwd"
+              show-password
+              prefix-icon="iconfont el-ico-xpassword">
+            </el-input>
+          </el-col>
+          <el-col :span="22" :offset="1" style="margin-top: 20px;">
+            <el-button class="login_btn" type="warning" @click="login()">登陆</el-button>
+            <el-col :span="14">
+              <p class="login_choose" style="float: left;">还没有账号？ <span style="color: #ff9419;">去注册</span></p>
+            </el-col>
+            <el-col :span="10">
+              <p class="login_choose" style="float: right;">忘记密码</p>
+            </el-col>
+          </el-col>
+          <el-col :span="22" :offset="1" style="margin-top: 20px;">
+            <h2 class="login_else">—————— 使用其他方式登录 ——————</h2>
+            <el-col :span="12" style="margin-top: 5px;">
+              <svg t="1601228676464" class="icon login_icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3438" width="200" height="200"><path d="M512.208754 65.349357c-247.52549 0-448.185602 200.659089-448.185602 448.185602S264.682241 961.720561 512.208754 961.720561s448.185602-200.660112 448.185602-448.185602S759.734244 65.349357 512.208754 65.349357zM769.258155 610.778724l0 3.744277 0 3.507894-0.63138 4.218068-0.906649 7.243985-1.261737 6.544043-1.932002 5.913687-0.708128 2.413979-1.340531 2.88777-1.144056 2.030239-1.49812 2.492774-1.340531 1.568728-1.695618 2.020006-1.497097 1.635243-1.616824 1.39886-1.932002 0.857531-1.733481 0.857531-1.418302 0.464581-1.243317 0-0.926092 0-1.39886-0.464581-2.660596-1.320065-1.222851-0.857531-1.261737-0.936325-1.39886-1.251503-1.400906-1.39886-2.324952-2.573615-2.758834-3.65525-2.168386-3.756557-2.169409-3.025916-2.106987-3.507894-2.976798-6.239098-3.350304-6.475482-0.394996-0.226151-0.550539 0-1.38044 1.01512-0.786922 1.705851-1.301645 2.106987-2.287089 6.317892-3.429099 8.960069-4.414543 10.751878-3.312442 5.381567-3.487428 5.606695-4.119831 6.307659-4.375657 6.170536-2.248204 2.799766-2.718925 3.035126-6.248308 6.158257 0.550539 0.543376 0.847298 0.867764 3.113921 1.861394 13.010315 6.239098 5.676279 3.192715 5.40101 3.113921 5.361101 3.903913 4.76963 4.051269 2.326998 1.791809 1.733481 2.098801 1.774413 2.426259 1.497097 2.650363 0.788969 2.177596 0.985444 2.65241 0.39295 2.25639 0.474814 2.650363-0.474814 1.784646 0 1.793856-0.39295 1.870604-0.985444 1.716084-0.393973 1.330298-0.867764 1.627057-2.365884 3.202948-2.167363 2.571568-1.695618 1.942235-1.418302 1.409093-3.588735 2.642177-4.058432 2.276856-4.337795 2.177596-4.612041 2.098801-5.203512 2.020006-2.758834 0.867764-2.484587 0.688685-5.990434 1.411139-6.228865 1.320065-6.228865 1.330298-6.78145 1.093914-7.015787 0.306992-7.175423 0.855484-7.094582 0-7.490601 0-7.688099 0-8.04114-0.462534-7.490601-0.699941-8.043187-1.093914-8.003278-0.857531-8.435113-1.172709-8.160867-2.030239-7.964392-1.556449-7.922437-2.25639-8.121981-2.88777-7.962346-2.413979-4.178159-1.390673-3.746324-1.340531-2.365884-0.926092L534.61916 752.470817l-3.035126 0-3.586688 0-7.648191-0.552585-3.883447-0.393973-4.987594-0.551562-3.192715 2.886747-4.375657 2.731204-5.913687 2.888793-6.54302 3.586688-3.980661 1.951445-4.139274 1.546216-9.185196 3.746324-4.987594 1.251503-5.223978 1.39886-7.252171 1.400906-4.533246 0.38374-4.809539 0.393973-5.008061 0.552585-5.832845 0.236384-5.598508 0-5.832845 0-12.399401 0-13.462616-0.236384-13.049201-1.330298-6.622838-0.926092-6.386454-0.946558-6.228865-0.926092-6.228865-1.251503-5.774517-1.87265-5.776563-1.320065-5.203512-2.098801-4.927219-1.951445-4.573155-2.187829-3.980661-2.413979-3.982708-2.88777-1.340531-1.39886L323.358619 752.470817l-1.340531-1.49812-1.222851-1.705851-1.102101-1.716084-0.867764-1.714038-1.24127-3.657296-0.454348-1.87265-0.550539-2.106987 0-1.942235 0.550539-2.177596 0-2.198062 0.454348-2.177596 0-1.322112 0-3.045359 0.215918-2.335185 1.025353-2.650363 0.867764-2.65241 1.575892-3.192715 1.143033-1.24127 0.946558-1.409093 2.482541-3.036149 1.971911-1.558495 1.853208-1.093914 1.716084-1.39886 2.739391-0.857531 2.167363-1.320065 2.720971-1.409093 3.113921-0.926092 3.114944-0.946558 3.586688-0.778736 3.429099-0.462534 4.061502-0.543376 4.375657-0.315178 1.162476-0.393973 0.236384 0 0.552585-0.474814 0-0.531096-0.788969-1.093914-2.345418-1.093914-5.832845-5.066389-3.903913-3.113921-4.533246-3.972475-4.573155-4.433986-4.76963-5.695722-5.439896-6.386454-2.050706-3.441379-2.720971-3.576455-2.324952-4.139274-2.089591-4.51278-2.837628-4.28663-1.852184-4.9088-2.187829-4.906753-2.187829-5.461385-1.616824-5.213745-1.49812-6.475482-0.473791-0.236384-0.452301 0-0.236384-0.462534-0.552585 0-0.926092 0.462534-0.472767 0.236384-0.63138 1.093914-0.236384 1.322112-0.472767 1.172709-0.829901 1.941212-2.680039 4.759397-1.378393 2.888793-2.187829 2.492774-2.345418 3.025916-2.563382 3.360538-2.720971 2.967588-3.192715 2.87856-2.974751 2.718925-3.252067 2.119267-3.588735 2.25639-3.429099 1.322112-4.060479 1.01512-3.980661 0.38374-0.394996 0-0.550539 0-0.906649-0.38374-0.710175-1.568728-1.182942-0.769526-1.538029-3.744277-0.944512-2.030239-1.025353-2.88777-0.848321-3.025916-0.454348-2.965541-1.261737-6.78145-0.471744-3.980661 0-4.051269 0-9.038864 0.471744-9.736758 0.788969-4.987594 0.926092-5.145184 0.848321-5.5279 1.497097-5.145184 1.695618-5.932106 1.733481-5.756097 2.326998-5.932106 2.187829-5.687536 3.015683-5.764284 2.837628-6.228865 3.429099-5.843078 4.041036-6.317892 4.119831-5.687536 4.296863-6.307659 3.586688-4.365424 4.593622-5.066389 4.827959-5.064342 2.248204-2.416026 2.739391-2.729158 3.962242-3.439332 4.061502-3.499707 6.621814-5.921873 5.006014-3.657296 1.774413-1.330298-0.984421-3.035126-0.788969-3.980661-0.550539-2.179642 0-2.729158 0-3.27151 0-2.957355 0.946558-3.507894 0.985444-3.746324 1.261737-3.89368 1.716084-4.355191 2.266623-4.523013 3.192715-4.533246 0-3.182482 0.315178-2.967588 0.472767-4.051269 1.38044-4.51278 1.261737-4.9088 1.004887-2.266623 1.162476-2.098801 1.497097-2.335185 1.616824-1.725294 0-3.182482 0-3.596921 0-4.433986 0.946558-5.774517 0.946558-6.702656 1.693572-8.021697 2.326998-8.337899 1.733481-4.603855 1.716084-4.985548 1.870604-4.672416 2.248204-4.985548 2.287089-5.459339 2.64013-5.134951 2.957355-5.459339 3.744277-5.461385 1.716084-3.114944 1.853208-2.571568 4.000104-5.764284 4.101411-5.76633 4.690836-5.921873 5.006014-5.776563 5.441942-5.675256 5.676279-5.855358 6.860245-6.307659 4.375657-3.823072 5.301749-4.130064 5.381567-3.657296 5.832845-3.507894 5.598508-3.113921 6.307659-2.572592 6.700609-3.202948 6.662747-2.177596 6.662747-2.25639 7.173376-2.25639 7.175423-1.715061 7.569396-1.409093 7.647167-1.242294 7.528464-1.01512 7.569396-1.025353 8.043187-0.453325 7.648191 0 7.924483 0 8.198729 0 7.924483 1.004887 7.962346 0.946558 8.121981 0.857531 7.528464 1.793856 7.962346 1.704828 7.472182 1.941212 8.178263 2.187829 7.490601 2.651386 7.175423 3.035126 7.648191 3.202948 6.997368 3.508917 6.779404 3.882424 6.642281 4.296863 5.756097 3.972475 2.64013 2.25639 2.799766 1.63729 5.322216 4.523013 4.493338 4.365424 4.454452 4.523013 4.375657 4.987594 3.588735 4.827959 4.256954 4.987594 2.997264 5.371334 3.015683 4.761444 3.211135 5.538133 2.642177 4.827959 4.495384 10.210549 2.206248 5.29254 1.716084 4.9088 1.716084 5.301749 1.535983 4.985548 1.104147 4.287653 1.38044 5.066389 2.443655 9.03784 1.556449 7.874341 1.004887 7.637957 0.867764 6.15007 1.38044 9.353019 0.315178 1.487887 1.104147 1.716084 2.955308 4.827959 1.893116 3.263323 1.695618 3.439332 2.167363 3.65525 1.893116 4.375657 1.220804 4.514827 1.340531 4.906753 1.025353 5.056156 0.471744 2.492774 0.396019 3.045359 0 2.65241-0.396019 2.650363 0 3.281743-0.786922 3.182482-1.419326 6.160303-1.616824 3.114944-1.182942 3.507894 0 0.857531 0.550539 1.093914 1.616824 2.571568 7.017834 10.368138 5.556553 7.78736 2.642177 5.223978 3.586688 5.685489 3.113921 6.239098 3.588735 6.691399 3.586688 7.490601 4.041036 8.495488 2.266623 5.213745 2.089591 5.066389 1.814322 5.381567 1.774413 4.827959 1.340531 5.066389 1.378393 4.761444 1.735527 9.272177 1.378393 9.500375 0.946558 8.416693L769.261225 610.778724z" p-id="3439"></path></svg>
+            </el-col>
+            <el-col :span="12" style="margin-top: 5px;">
+              <svg t="1601228730778" class="icon login_icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4268" width="200" height="200"><path d="M319.302 385.396a33.513 33.513 0 1 0 67.025 0 33.513 33.513 0 1 0-67.025 0zM469.178 384.465a33.513 33.513 0 1 0 67.026 0 33.513 33.513 0 1 0-67.026 0zM552.96 534.342a23.273 23.273 0 1 0 46.545 0 23.273 23.273 0 1 0-46.545 0zM671.185 536.204a23.273 23.273 0 1 0 46.546 0 23.273 23.273 0 1 0-46.546 0z" p-id="4269"></path><path d="M512 0C229.004 0 0 229.004 0 512s229.004 512 512 512 512-229.004 512-512S794.996 0 512 0z m-87.505 630.225c-26.997 0-48.408-5.585-75.404-11.17l-75.404 37.236 21.411-64.233c-53.993-37.236-85.643-85.643-85.643-145.222 0-102.4 96.814-182.458 215.04-182.458 105.192 0 198.283 64.233 216.901 150.807-6.516-0.93-13.963-0.93-20.48-0.93-102.4 0-182.458 76.334-182.458 170.356 0 15.825 2.793 30.72 6.517 44.684-7.448 0-13.964 0.93-20.48 0.93z m314.647 75.404l15.825 53.993-58.647-32.582c-21.41 5.585-42.822 11.17-64.233 11.17-102.4 0-182.458-69.817-182.458-155.46s80.058-155.463 182.458-155.463c96.815 0 182.458 69.818 182.458 155.462 0 47.476-31.65 90.298-75.403 122.88z" p-id="4270"></path></svg>
+            </el-col>
+          </el-col>
+        </el-col>
       </el-row>
-    </el-row>
-    <el-row id="enroll_right">
-      <el-col id="bg_img" class="hidden-xs-only"></el-col>
-      <div id="enroll_box">
-          <div id="tab_wx" :style="{wx_tab}" @click="tab_wx" ></div>
-          <el-form v-if="tabState" :model="ruleForm"  ref="ruleForm" label-width="100px" class="demo-ruleForm" id="demo-ruleForm">
-            <el-form-item label="用户名" prop="name">
-              <el-input v-model="ruleForm.acc"></el-input>
-            </el-form-item>
-            <el-form-item label="密码" prop="name">
-              <el-input type="password" v-model="ruleForm.pwd"></el-input>
-            </el-form-item>
-            <el-form-item size="large">
-              <el-button type="primary">登陆</el-button>
-              <el-button>重置</el-button>
-            </el-form-item>
-          </el-form>
-
-        <div v-else class="wx_box">
-            <p>微信扫码登陆</p>
-          <div class="wx_img">
-
-          </div>
-        </div>
-
-      </div>
-      <el-row id="bottom" class="hidden-xs-only">
-        <el-col><h2 style="color: white">没有账号？点击注册</h2></el-col>
-        <el-col><el-button type="primary" round>注册</el-button></el-col>
-      </el-row>
-    </el-row>
-  </div>
+      <el-col class="login_background"></el-col>
+    </el-main>
+    <el-footer class="login_foot">
+      <public_foot></public_foot>
+    </el-footer>
+  </el-container>
 </template>
 
 <script>
+  import public_head from "../public/public_head";
+  import public_foot from "../public/public_foot";
   export default {
-    name: 'login',
-    data () {
+    name: "login",
+    data() {
       return {
-        widowHeight: window.innerHeight,
-        ruleForm:{
-          name: '',
-          acc:'',
-          querenmima: '',
-          pwd: '',
-          yanzm: '',
-          phone: '',
-        },
-        tabState:true,
-        wx_tab:'background-position: 0px 0px;',
+        loginForm: {
+          loginAcc: '',
+          loginPwd: ''
+        }
       }
     },
     methods: {
-      resetForm(formName) {
-        this.$refs[formName].resetFields();
+      // 错误提示
+      alertErr (msg, type) {
+        this.$message({
+          message: msg,
+          type: type
+        })
       },
-      tab_wx(){
-        if(this.tabState){
-          this.wx_tab='background-position: -58px -59px;'
-        }else{
-          this.wx_tab='background-position: 0px 0px;'
+      login() {
+        // 数据有效性判断
+        if(this.loginForm.loginAcc==''){
+          this.alertErr('账号不能为空',"error");
+          return;
         }
-        console.log(this.wx_tab)
-
-        return this.tabState=!this.tabState
+        if(this.loginForm.loginPwd==''){
+          this.alertErr('密码不能为空',"error");
+          return;
+        }
+        // ajax请求判断用户信息
+        var that = this;
+        this.$axios.post('/index/login/login',{userInfo:that.loginForm}).then(response => {
+          if(response.data.code=='10211'){
+            setTimeout(() => {
+              this.$router.push({ path:'/index' });
+            }, 3000);
+            that.alertErr(response.data.msg,'success');
+          }else{
+            that.alertErr(response.data.msg,'error');
+          }
+        })
       }
     },
-    mounted () {
-
+    components: {
+      public_head,
+      public_foot
     }
   }
 </script>
+
 <style scoped>
-  body{
-    height: 100%;
+  .login_head{
+    height: 28px;
+    background: #f8f8f8;
+    padding-top: 8px;
+    border-bottom: 2px solid #eee;
   }
-  #enroll_left{
-    width: 25%;
-    height: 100%;
-    /*border: 1px solid black;*/
-    position: fixed;
-    font-size: 1rem;
-    display:table-cell;
-  }
-  #left_top{
-    margin-top: 10%;
-  }
-  #left_txt{
-    width: 90%;
+  .logo{
+    margin: -20px;
+    height: 100px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    top: 0;
+    left: -30px;
+    filter: drop-shadow(3px 0px 1px #fff);
   }
-  #enroll_right{
-    width: 75%;
-    height: 1200px;
-    /*border: 1px solid black;*/
-    float: right;
+  .login_foot{
+    padding: 0;
+    position: relative;
+    box-shadow: -10px -40px 50px #000000f2;
   }
-  #bg_img{
-    width: 100%;
-    height: 40%;
-    background: url(http://47.104.241.112/static/img/bg.jpg);
+  .login_form{
+    min-height: 100vh;
+    position: relative;
+    background-image: url("http://47.105.158.199/3124/840.png");
     background-size: 100% 100%;
+    background-position: left;
     background-repeat: no-repeat;
   }
-  #enroll_box{
-    width: 30%;
-    /*border: 1px solid black;*/
-    height: 300px;
-    /*margin: 0 auto;*/
-    display: inline-block;
-    text-align: center;
-    margin-top: 5%;
+  .login_form_item{
+    width: 360px;
+    height: 440px;
+    padding: 20px;
     position: relative;
-    background-color: #F6F6F6;
-
+    overflow: hidden;
+    margin-top: 50px;
+    color: #fff;
+    background: rgba(20, 20, 20, 0.7);
   }
-
-  .wx_box{
+  .login_image{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    height: 90%;
-    transform: translateY(-50%) translateX(-50%);
-    /*border: 1px solid black;*/
-
+    left: 20px;
+    height: 150px;
+    opacity: 0.85;
   }
-  .wx_img{
+  .login_background{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 74%;
-    transform: translateY(-50%) translateX(-50%);
-    border: 1px solid black;
-  }
-
-  #tab_wx{
-    /*border: 1px solid black;*/
-    width: 13%;
-    height: 15%;
-    position: absolute;
-    right: 0;
     top: 0;
-    background: url(http://47.104.241.112/static/img/qr-2.png);
-  }
-  #bottom{
+    left: 0;
     width: 100%;
-    height: 21%;
-    background-color: #15777b;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.75;
+    background-image: url("http://tj123.mydown.com/yuanqidesktop/images/fengjing/pic5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  #demo-ruleForm{
-    position: absolute;
-    top: 50%;
-    left: 1px;
-    transform: translateY(-50%);
+  .login_btn{
+    width: 100%;
   }
-  @media(max-width: 1200px){
-    #enroll_left{
-      /*position: static;*/
-      width: 100%;
-      height: 30%;
-      border: 1px solid black;
-      font-size: 1rem;
-    }
-    #left_top{
-      margin-top: 0;
-    }
-    #enroll_right{
-
-      width:100%;
-      height: 1200px;
-      margin-top: 10%;
-    }
-    #left_txt{
-      width: 90%;
-      text-align: left;
-      position: absolute;
-      margin-left: 2%;
-      top: 50%;
-      left: 1px;
-      transform: translateY(-50%);
-    }
+  .login_choose{
+    color: #e5e5e5;
+    font-size: 14px;
   }
-  @media(max-width: 768px){
-    #enroll_left{
-      /*position: static;*/
-      width: 100%;
-      height: 10%;
-      /*border: 1px solid black;*/
-      z-index: 99;
-      background-color: #15777B;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      font-size: 1rem;
-    }
-    #enroll_right{
-      height: 600px;
-      /*border: 1px solid black;*/
-    }
-    #left_top{
-      height: 100%;
-      line-height: 100%;
-    }
-    #txt_box{
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
+  .login_else{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 13px;
+    color: #aaaaaa;
+    text-align: center;
+  }
+  .login_icon{
+    width: 40px;
+    height: 40px;
+    opacity: 0.85;
+    cursor: pointer;
   }
 </style>

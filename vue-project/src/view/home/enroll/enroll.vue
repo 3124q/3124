@@ -1,185 +1,272 @@
 <template>
-  <div>
-    <el-row id="enroll_left" hidden-sm-and-down>
-       <div id="left_top">
-         <el-row :gutter="10" id="txt_box">
-           <el-col :xs="8" :sm="2" :md="2" :lg="6" class="hidden-xs-only txt">logo</el-col>
-           <el-col :xs="8" :sm="2" :md="2" :lg="6" class="txt">首页</el-col>
-           <el-col :xs="8" :sm="2" :md="2" :lg="6" class="txt">登陆</el-col>
-           <el-col :xs="8" :sm="2" :md="2" :lg="6" class="txt">联系我们</el-col>
-         </el-row>
-       </div>
-      <el-row id="left_txt">
-        <el-col class="hidden-xs-only"><h2>登陆或者创建一个新账户</h2></el-col>
+  <el-container>
+    <el-header height="30px" class="login_head">
+      <public_head></public_head>
+    </el-header>
+    <el-main class="enroll_form">
+      <el-row>
+        <el-col class="login_form_item" :span="10" :offset="7">
+          <el-col :span="22" :offset="1">
+            <h2>注册</h2>
+            <img class="logo" src="http://47.105.158.199/3124/16pic_5211757_s.png">
+          </el-col>
+          <el-col :span="20" :offset="2">
+            <el-steps :active="active" finish-status="success" style="text-align: left;">
+              <el-step title="步骤 1"></el-step>
+              <el-step title="步骤 2"></el-step>
+              <el-step title="步骤 3"></el-step>
+            </el-steps>
+          </el-col>
+          <el-row v-if="active==0">
+            <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="55px" class="demo-ruleForm">
+              <el-form-item prop="age" style="width: 90%;">
+                <el-input v-model.number="ruleForm.age" prefix-icon="iconfont el-ico-xuser" autocomplete="off" placeholder="请输入账号"></el-input>
+              </el-form-item>
+              <el-form-item prop="pass" style="width: 90%;">
+                <el-input type="password" v-model="ruleForm.pass" autocomplete="off" prefix-icon="iconfont el-ico-xpassword" placeholder="请输入密码"></el-input>
+              </el-form-item>
+              <el-form-item prop="checkPass" style="width: 90%;">
+                <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off" prefix-icon="iconfont el-ico-xpassword" placeholder="请再次确认密码"></el-input>
+              </el-form-item>
+              <el-col :span="20" :offset="2" style="margin-top: 20px;">
+                <el-button style="width: 100%;margin-top: 12px;" @click="next">下一步</el-button>
+              </el-col>
+            </el-form>
+          </el-row>
+          <el-row v-if="active==1">
+            <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" class="demo-ruleForm">
+              <el-col :span="20" :offset="2" style="margin-top: 30px;">
+                <el-form-item prop="enroll_phone">
+                  <el-input
+                    placeholder="请输入手机号"
+                    v-model="ruleForm.enroll_phone"
+                    clearable
+                    autocomplete="off">
+                  </el-input>
+                </el-form-item>
+              </el-col>
+              <el-col :span="20" :offset="2" style="margin-top: 10px;">
+                <el-input placeholder="请输入验证码" v-model="ruleForm.VC_code" prefix-icon="icon svg-icon el-ico-xyanzhengma2">
+                  <el-button slot="append">发送验证码</el-button>
+                </el-input>
+              </el-col>
+            </el-form>
+            <el-col :span="20" :offset="2" style="margin-top: 20px;">
+              <el-col :span="24">
+                <el-button-group>
+                  <el-button type="primary" icon="el-icon-arrow-left" @click="prev" style="width: 50%">上一页</el-button>
+                  <el-button type="primary" @click="next" style="width: 50%">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+                </el-button-group>
+              </el-col>
+            </el-col>
+          </el-row>
+          <el-row v-if="active==2">
+            <el-col :span="20" :offset="2" style="margin-top: 60px;">
+              <h2>注册成功</h2>
+            </el-col>
+          </el-row>
+        </el-col>
       </el-row>
-    </el-row>
-    <el-row id="enroll_right">
-      <el-col id="bg_img" class="hidden-xs-only"></el-col>
-      <div id="enroll_box">
-        <el-form :model="ruleForm"  ref="ruleForm" label-width="100px" class="demo-ruleForm">
-          <el-form-item label="用户名" prop="name">
-            <el-input v-model="ruleForm.acc"></el-input>
-          </el-form-item>
-          <el-form-item label="密码" prop="name">
-            <el-input type="password" v-model="ruleForm.pwd"></el-input>
-          </el-form-item>
-          <el-form-item label="确认密码" prop="name">
-            <el-input type="password" v-model="ruleForm.querenmima"></el-input>
-          </el-form-item>
-          <el-form-item label="手机号" prop="name">
-            <el-input v-model="ruleForm.phone" style="float: left;width: 70%"></el-input>
-            <el-button style="float: left;">发送验证码</el-button>
-          </el-form-item>
-          <el-form-item label="验证码" prop="name">
-            <el-input v-model="ruleForm.yanzm"></el-input>
-            <el-button type="text" style="float:right;margin-right: 3%">忘记密码</el-button>
-          </el-form-item>
-          <el-form-item size="large">
-            <el-button type="primary">注册</el-button>
-            <el-button>重置</el-button>
-          </el-form-item>
-        </el-form>
-      </div>
-      <el-row id="bottom" class="hidden-xs-only">
-        <el-col><h2 style="color: white">没有账号？点击注册</h2></el-col>
-        <el-col><el-button type="primary" round>注册</el-button></el-col>
-      </el-row>
-    </el-row>
-
-
-  </div>
+    </el-main>
+    <el-footer class="login_foot">
+      <public_foot></public_foot>
+    </el-footer>
+  </el-container>
 </template>
 
 <script>
-export default {
-  name: 'enroll',
-  data () {
-    return {
-      widowHeight: window.innerHeight,
-      ruleForm:{
-        name: '',
-        acc:'',
-        querenmima: '',
-        pwd: '',
-        yanzm: '',
-        phone: '',
+  import public_head from "../public/public_head";
+  import public_foot from "../public/public_foot";
+  export default {
+    name: "enroll",
+    data() {
+      // 正则判断
+      var checkAge = (rule, value, callback) => {
+        if (!value) {
+          return callback(new Error('账号不能为空'));
+        }
+        setTimeout(() => {
+          if (!Number.isInteger(value)) {
+            callback(new Error('请输入纯数字'));
+          } else {
+            if (value.toString().length < 8) {
+              callback(new Error('账号长度必须大于8个字符'));
+            } else {
+              callback();
+            }
+          }
+        }, 1000);
+      };
+      var validatePass = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请输入密码'));
+        } else {
+          var reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}$/;
+          if (!reg.test(value)) {
+            callback(new Error('密码至少8-16个字符，至少1个大写字母，1个小写字母和1个数字'));
+          } else {
+            if (this.ruleForm.checkPass !== '') {
+              this.$refs.ruleForm.validateField('checkPass');
+            }
+            callback();
+          }
+        }
+      };
+      var validatePass2 = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请再次输入密码'));
+        } else if (value !== this.ruleForm.pass) {
+          callback(new Error('两次输入密码不一致!'));
+        } else {
+          callback();
+        }
+      };
+      var checkPhone = (rule, value, callback) => {
+        var reg = /^1[3456789]\d{9}$/;
+        if (value == ''){
+          callback(new Error('请输入手机号'));
+        } else if (!reg.test(value)){
+          callback(new Error('请正确输入手机号'));
+        } else {
+          callback();
+        }
+      };
+      return {
+        // 步骤条
+        active: 0,
+        // 用户数据
+        ruleForm: {
+          pass: '',
+          checkPass: '',
+          age: '',
+          VC_code: '',
+          enroll_phone: ''
+        },
+        rules: {
+          pass: [
+            { validator: validatePass, trigger: 'blur' }
+          ],
+          checkPass: [
+            { validator: validatePass2, trigger: 'blur' }
+          ],
+          age: [
+            { validator: checkAge, trigger: 'blur' }
+          ],
+          enroll_phone: [
+            { validator: checkPhone, trigger: 'blur' }
+          ]
+        }
       }
+    },
+    methods: {
+      prev() {
+        this.active = 0;
+      },
+      next() {
+        if (this.active == 0) {
+          // 数据有效性判断
+          var reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}$/;
+          if(this.ruleForm.age==''){
+            this.alertErr("账号不能为空","error")
+            return
+          }else if(this.ruleForm.pass==''){
+            this.alertErr("密码不能为空","error")
+            return
+          }else if(this.ruleForm.checkPass==''){
+            this.alertErr("请再次输入密码","error")
+            return
+          }else if(this.ruleForm.age.toString().length<8||!Number.isInteger(this.ruleForm.age)){
+            this.alertErr("请按规范输入账号","error")
+            return
+          }else if(!reg.test(this.ruleForm.pass)){
+            this.alertErr("请按规范输入密码","error")
+            return
+          }else if(this.ruleForm.pass!=this.ruleForm.checkPass){
+            this.alertErr("请检查两次输入的密码","error")
+            return
+          }
+          this.active+=1;
+        }else if(this.active == 1){
+          // 数据有效性判断
+          var reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{8,16}$/;
+          if (reg.test(this.ruleForm.enroll_phone)) {
+            this.alertErr('请正确输入手机号',"error");
+            return
+          }
+          // 手机验证码校验
+          // ajax请求后端
+          this.enroll();
+        }
+      },
+      // 错误提示
+      alertErr (msg, type) {
+        this.$message({
+          message: msg,
+          type: type
+        })
+      },
+      // 注册ajax
+      enroll (){
+        var that = this;
+        this.$axios.post('/index/enroll/enroll',{userInfo:that.ruleForm}).then(response => {
+          if(response.data.code=='10111'){
+            this.active+=1;
+            that.alertErr(response.data.msg,'success');
+          }else{
+            that.alertErr(response.data.msg,'error');
+          }
+        })
+      }
+    },
+    components: {
+      public_head,
+      public_foot
     }
-  },
-  methods: {
-    resetForm(formName) {
-      this.$refs[formName].resetFields();
-    }
-  },
-  mounted () {
-
   }
-}
 </script>
+
 <style scoped>
-  body{
-    height: 100%;
+  .login_head{
+    height: 28px;
+    background: #f8f8f8;
+    padding-top: 8px;
+    border-bottom: 2px solid #eee;
   }
-#enroll_left{
-  width: 25%;
-  height: 100%;
-  /*border: 1px solid black;*/
-  position: fixed;
-  font-size: 1rem;
-  display:table-cell;
-}
-#left_top{
-  margin-top: 10%;
-}
-  #left_txt{
-    width: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-  }
-  #enroll_right{
-    width: 75%;
-    height: 1200px;
-    /*border: 1px solid black;*/
-    float: right;
-  }
-  #bg_img{
-    width: 100%;
-    height: 40%;
-    background: url(http://47.104.241.112/static/img/bg.jpg);
-    background-size: 100% 100%;
+  .enroll_form{
+    min-height: 100vh;
+    position: relative;
+    background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601289103725&di=b8dcad2a02e18cfea54aaa477e185848&imgtype=0&src=http%3A%2F%2F01.minipic.eastday.com%2F20161220%2F20161220000043_7759ae5ae449bef7d892b20c24bd0731_1.jpeg");
+    background-size: cover;
+    background-position: left;
     background-repeat: no-repeat;
   }
-  #enroll_box{
-    width: 50%;
-    height: auto;
-    /*margin: 0 auto;*/
-    display: inline-block;
-    text-align: center;
-    margin-top: 5%;
+  .login_foot{
+    padding: 0;
+    position: relative;
+    box-shadow: -10px -40px 50px #000000f2;
   }
-  #bottom{
+  .logo{
+    margin: -20px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    filter: drop-shadow(3px 0px 1px #fff);
+  }
+  .login_form_item{
+    height: 430px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+    color: #fff;
+    background: rgba(20, 20, 20, 0.7);
+  }
+  .login_btn{
     width: 100%;
-    height: 21%;
-    background-color: #15777B;
   }
-  @media(max-width: 1200px){
-    #enroll_left{
-      /*position: static;*/
-      width: 100%;
-      height: 30%;
-      border: 1px solid black;
-      font-size: 1rem;
-    }
-    #left_top{
-      margin-top: 0;
-    }
-    #enroll_right{
-
-      width:100%;
-      height: 1200px;
-      margin-top: 10%;
-    }
-    #left_txt{
-      width: 90%;
-      text-align: left;
-      position: absolute;
-      margin-left: 2%;
-      top: 50%;
-      left: 1px;
-      transform: translateY(-50%);
-    }
-  }
-  @media(max-width: 768px){
-    #enroll_left{
-      /*position: static;*/
-      width: 100%;
-      height: 10%;
-      /*border: 1px solid black;*/
-      z-index: 99;
-      background-color: #15777B;
-      color: white;
-      position: fixed;
-      bottom: 0;
-      font-size: 1rem;
-    }
-    #enroll_right{
-      height: 600px;
-      /*border: 1px solid black;*/
-    }
-    #enroll_box{
-      width: 100%;
-    }
-    #left_top{
-      height: 100%;
-      line-height: 100%;
-    }
-    #txt_box{
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  .login_choose{
+    color: #e5e5e5;
+    font-size: 14px;
   }
 </style>

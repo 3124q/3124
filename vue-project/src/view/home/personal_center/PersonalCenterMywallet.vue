@@ -2,7 +2,7 @@
   <div id="PersonalCenterMywallet">
     <div class="Info-title">
       <div class="basic-info">
-        我的钱包
+        <span class="personal_title">我的钱包</span>
       </div>
     </div>
     <div class="mywalletcontent">
@@ -40,6 +40,21 @@
     font-size: 14px;
     color: #ec350bd1;
   }
+  .Info-title{
+    width: 100%;
+    height: 46px;
+  }
+  .basic-info{
+    float: left;
+    height: 100%;
+    line-height: 46px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .personal_title{
+    padding-left: 10px;
+    border-left: solid 3px #0088a4;
+  }
   .mywalletcontent{
     margin-top: 10px;
     width: 100%;
@@ -47,6 +62,7 @@
     /*background-color: #2e9900;*/
   }
   .walletbalance{
+    background: #fff;
     box-sizing: border-box;
     width: 100%;
     height: 115px;
