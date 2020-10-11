@@ -12,50 +12,50 @@
     <el-main>
       <el-table
         ref="filterTable"
-        :data="tableData"
+        :data="activity"
         style="width: 100%">
         <el-table-column
-          prop="date"
+          prop="activity_name"
           label="活动名称"
-          sortable
-          width="180"
           column-key="date"
         >
         </el-table-column>
         <el-table-column
-          prop="name"
-          label="活动时间"
-          width="180">
+          label="宣传图片"
+        >
+          <el-image
+            style="width: 90px; height: 100px"
+            :src="url">
+          </el-image>
         </el-table-column>
         <el-table-column
-          prop="address"
-          label="活动链接"
-          :formatter="formatter">
+          prop="activity_beginTime"
+          sortable
+          label="开始时间"
+          :formatter="dateFormat">
         </el-table-column>
         <el-table-column
-          prop="tag"
-          label="活动状态"
-          width="100"
-          :filters="[{ text: '未上架', value: '未上架' }, { text: '活动中', value: '活动中' }, { text: '活动过期', value: '活动过期' }]"
-          :filter-method="filterTag"
-          filter-placement="bottom-end">
-          <template slot-scope="scope">
-            <el-tag
-              :type="scope.row.tag === '家' ? 'primary' : 'success'"
-              disable-transitions>{{scope.row.tag}}</el-tag>
-          </template>
+          prop="activity_endTime"
+          sortable
+          label="结束时间"
+          :formatter="dateFormat">
         </el-table-column>
         <el-table-column
-          prop="address"
-          label="活动简介">
+          prop="activity_webUrl"
+          label="活动链接">
         </el-table-column>
-        <el-table-column label="操作">
+        <el-table-column
+          prop="activity_details"
+          label="活动简介"
+          width="340">
+        </el-table-column>
+        <el-table-column label="操作" width="150">
           <template slot-scope="scope">
             <el-button
               size="mini">编辑</el-button>
             <el-button
               size="mini"
-              type="danger">下架</el-button>
+              type="danger">移除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -64,10 +64,13 @@
 </template>
 
 <script>
+  import moment from 'moment'
   export default {
     name: "activity_administration",
     data() {
       return {
+        activity: [],
+        url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
         tableData: [{
           date: '2016-05-02',
           name: '王小虎',
@@ -91,22 +94,36 @@
         }]
       }
     },
+    mounted:function(){
+      // 进入页面即需要触发的函数
+      this.getActivity();
+    },
     methods: {
-      resetDateFilter() {
-        this.$refs.filterTable.clearFilter('date');
+      // 错误提示
+      alertErr (msg, type) {
+        this.$message({
+          message: msg,
+          type: type
+        })
       },
-      clearFilter() {
-        this.$refs.filterTable.clearFilter();
+      // element-ui表格中的数据转换为时间戳
+      dateFormat(row, column) {
+        var date = parseInt(row[column.property]);
+        if (date == undefined) {
+          return "";
+        }
+        var moment = require("moment");
+        return moment(date).format("YYYY-MM-DD");
       },
-      formatter(row, column) {
-        return row.address;
-      },
-      filterTag(value, row) {
-        return row.tag === value;
-      },
-      filterHandler(value, row, column) {
-        const property = column['property'];
-        return row[property] === value;
+      getActivity: function () {
+        this.$axios.post('/admin/AdminActivity/getActivity').then(res => {
+          if(res.data.code=="20431"){
+            this.activity = res.data.data;
+            console.log(this.activity);
+          }else{
+            this.activity = [];
+          }
+        })
       }
     }
   }

@@ -52,7 +52,6 @@ import activity_pulish
   from "../view/admin/admin/administration/web_administration/propaganda/activity_pulish";
 import activity_administration
   from "../view/admin/admin/administration/web_administration/propaganda/activity_administration";
-import notice_pulish from "../view/admin/admin/administration/account_administration/notice_pulish";
 import hotel_administration
   from "../view/admin/admin/administration/business_administration/hotel/hotel_administration";
 import banner_administration
@@ -121,7 +120,6 @@ export default new Router({
         { path: '/admin/roomPulish',name: 'room_publish',component: room_pulish},
         { path: '/admin/roomAdministration',name: 'room_administration',component: room_administration},
         { path: '/admin/hotelOomment',name: 'hotel_comment',component: hotel_comment},
-        { path: '/admin/noticePulish',name: 'notice_pulish',component: notice_pulish},
         { path: '/admin/hotel_administration',name: 'hotel_administration',component: hotel_administration},
         { path: '/admin/activityPublish',name: 'activity_pulish',component: activity_pulish},
         { path: '/admin/banner_pulish',name: 'banner_pulish',component: banner_pulish},
